@@ -54,7 +54,7 @@
 			</div>
 		</section>
 
-			<div class="container-fluid">
+			<!-- <div class="container-fluid">
 				<div class="row row1">
 				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/planning.jpg"); ?>"></div>
 				  <div class="col-sm-6 garis" >
@@ -63,30 +63,27 @@
 					</div>
 				</div>
 			</div>
-				<!--<div class="box">
-					<img src="<?php echo base_url("img/planning.jpg"); ?>">
-				</div>
-				<div id="text" class="box">
-					<h3>Text</h3>
-						<p>Text yang lebih panjang</p>
-				</div>-->
+			<div class="box">
+				<img src="<?php echo base_url("img/planning.jpg"); ?>">
+			</div>
+			<div id="text" class="box">
+				<h3>Text</h3>
+					<p>Text yang lebih panjang</p>
+			</div> -->
 
 
 		<div class="container">
 		  <div class="wrapper">
-		    <h1>Shrinking Nav</h1>
-		    <p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-
-		    <p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-
-		    <p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-
-		    <p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-			<p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-
-			<p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
+		    <div class="row ">
+        <?php foreach($article as $b){ ?>
+	          	<?php echo $b->judul ?>
+	          	<?php echo $b->isi ?>
+	    	<?php } ?>
+        </div>
 			</div>
 		</div>
+
+
 		<section class="text-center">
 			<footer id="footer" class="dark">
 				<div class="container ">

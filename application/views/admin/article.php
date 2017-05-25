@@ -46,7 +46,7 @@
                 <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Organizer</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
-            <a class="navbar-brand" href=""><?php echo $ses; ?></a>
+            <a class="navbar-brand" href=""><?php echo $this->session->userdata('session')['user']; ?></a>
             <li><a href="<?php echo base_url().'Admin/Login/logout' ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
             </ul>
             <!-- /.navbar-top-links -->
@@ -89,6 +89,11 @@
                             <strong>Database Artikel NEO Wedding</strong>
                         </div>
                         <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="<?php echo base_url().'Admin/Article/showAdd' ?>"><button type="button" class="btn btn-primary pull-right" >Tambah Artikel</button></a>
+                            </div>
+                        </div>
                         <div>
                         </div>
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables">
@@ -122,23 +127,10 @@
                                                     <a type="button" href="<?php echo base_url().'Admin/Article/doDelete/'. $a->no ?>">Hapus</a>
                                                 </li>
                                                 <li>
-
-                                                    <a type="button" onclick="editArticlee('<?php echo $a->no ?>')" data-toggle="modal" data-target="#editArticle">Edit</a>
-
-                                                    <!-- <a href="" data-toggle="modal" data-target="#editArticle">Edit</a> -->
-                                                    <!-- <a type="button" href="<?php echo base_url().'Admin/Article/edit/'. $a->no ?>" data-toggle="modal" data-target="#editArticle">Edit</a> -->
-                                                    <!-- data-toggle="modal" data-target="#editArticle" -->
-
+                                                    <a type="button" href="<?php echo base_url().'Admin/Article/editArtikel/'. $a->no ?>">Edit</a>
                                                 </li>
                                               </ul>
                                             </div>
-
-                                            <!-- <form method="post" action="<?php echo base_url().'Admin/Article/doDelete/'. $a->no ?>">
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Hapus"/>
-                                            </form><br>
-                                            <form method="post" action="<?php echo base_url().'Admin/Article/edit/'. $a->no ?>">
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Edit" data-target="#editArticle"/>
-                                            </form><br> -->
                                         </td>
                                     </tr>
                                     <?php } ?>
@@ -180,61 +172,9 @@
             </div>
         </div>
         <!-- /#page-wrapper -->
-        <button type="button" id="add" class="btn btn-primary btn-circle btn-xl" data-toggle="modal" data-target="#addArticle"><i class="fa fa-plus"></i></button>
+        
     </div>
     <!-- /#wrapper -->
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="addArticle">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Tambah Artikel</h4>
-          </div>
-          <div class="modal-body">
-            <form role="form" method="post" action="<?php echo base_url().'Admin/Article/addArticle'?>">
-                <fieldset>
-                    <input class="form-control" placeholder="Judul" name="judull" type="text" required>
-                    <br>
-                    <textarea class="form-control" placeholder="Isi" name="isi" rows="3"></textarea>
-                    <br>
-                    <!-- <p><?php echo $error; ?></p> -->
-                    <input type="submit" class="btn btn-primary pull pull-right" value="Save Article"/>
-                    <button style="margin-right: 10px" type="button" class="btn btn-default pull pull-right" data-dismiss="modal">Close</button>
-                    <?php echo form_close(); ?><br>
-                </fieldset>
-            </form>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="editArticle">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Edit Artikel</h4>
-          </div>
-          <div class="modal-body">
-
-            <form role="form" method="post" id="editForm" action="<?php echo base_url().'Admin/Article/editArticle'?>">
-                <fieldset>
-                    <input id="noo" type="text" name="noo" hidden>
-                    <input class="form-control" id="judull" name="judull" type="text" required>
-                    <br>
-                    <textarea class="form-control" id="isi" name="isi" rows="3"></textarea>
-                    <br>
-                    <input type="submit" class="btn btn-primary pull pull-right" value="Update"/>
-                    <button style="margin-right: 10px" type="button" class="btn btn-default pull pull-right" data-dismiss="modal">Close</button>
-                    <?php echo form_close(); ?><br>
-                </fieldset>
-            </form>
-
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
     <!-- jQuery -->
     <script src="<?php echo base_url().'assets/admin_bootstrap/vendor/jquery/jquery.min.js' ?>"></script>

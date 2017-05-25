@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gallery Admin</title>
+    <title>Article Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url().'assets/admin_bootstrap/vendor/bootstrap/css/bootstrap.css' ?>" rel="stylesheet">
@@ -27,10 +27,9 @@
     <link href="<?php echo base_url().'assets/admin_bootstrap/dist/css/sb-admin-2.css' ?>" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="<?php echo base_url().'assets/admin_bootstrap/vendor/font-awesome/css/font-awesome.min.css'?>" type="text/css" rel="stylesheet">
+    <link href="<?php echo base_url().'assets/admin_bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet' ?>" type="text/css">
 
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/lightbox.css"); ?>" />
-    
+    <link href="<?php echo base_url().'assets/dist/summernote.css' ?>" rel="stylesheet">
 
 </head>
 
@@ -74,75 +73,86 @@
                         </li>
                     </ul>
                 </div>
+                <!-- /.sidebar-collapse -->
             </div>
+            <!-- /.navbar-static-side -->
         </nav>
 
         <div id="page-wrapper">
             <div class="row">
-            <?php
-                if(isset($error)){
-                    echo "<div class='alert alert-danger'>$error</div>";
-                } else if(isset($error1)){
-                    echo "<div class='alert alert-danger'>$error1</div>";
-                }
-            ?>
                 <div class="col-lg-12">
-                    <h1 class="page-header">Gallery</h1>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Tambah Artikel</strong>
+                        </div>
+                        <div class="panel-body">
+                            
+
+                            <?php if(isset($artikel)){ ?>
+                                <?php foreach ($artikel as $a) { ?>
+                            
+                                <form role="form" method="post" action="<?php echo base_url().'Admin/Article/updateArticle/'.$a->no ?>">
+                                    <fieldset>
+                                        <input class="form-control" placeholder="Judul" value="<?php echo $a->judul ?>" name="judull" type="text" required>
+                                        <br>
+                                        <textarea name="txtArtikel" id="summernote"><?php echo $a->isi ?></textarea>
+                                        <br>
+                                        <input type="submit" class="btn btn-primary pull pull-right" value="Save Article"/>
+                                        <?php echo form_close(); ?><br>
+                                    </fieldset>
+                                </form>
+                                <?php } ?>
+                            <?php } else { ?>
+                                <form role="form" method="post" action="<?php echo base_url().'Admin/Article/addArticle/' ?>">
+                                    <fieldset>
+                                        <input class="form-control" placeholder="Judul" name="judull" type="text" required>
+                                        <br>
+                                        <textarea name="txtArtikel" id="summernote"></textarea>
+                                        <br>
+                                        <input type="submit" class="btn btn-primary pull pull-right" value="Save Article"/>
+                                        <?php echo form_close(); ?><br>
+                                    </fieldset>
+                                </form>
+                            <?php } ?>
+                        </div>
+                    </div>
                 </div>
-                <!-- /.col-lg-12 -->
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Article</h1>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <strong>Database Gallery NEO Wedding</strong>
+                            <strong>Database Artikel NEO Wedding</strong>
                         </div>
-                        <!-- /.panel-heading -->
                         <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#addGallery">Tambah Gallery</i></button>
-                            </div>
+                        <div>
                         </div>
-
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables">
                                 <thead>
                                     <tr>
                                         <th>No</th>
                                         <th>Judul</th>
-                                        <th>Keterangan</th>
-                                        <th>Gambar</th>
+                                        <th>Isi</th>
                                         <th>Tanggal Update</th>
                                         <th>Option</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $i = 1; foreach($gallery as $b){ ?>
+
+                                    <?php $i = 1; foreach($article as $a){ ?>
                                     <tr>
+                              
                                         <td><?php echo $i++; ?></td>
-                                        <td><?php echo $b->judul ?></td>
-                                        <td><?php echo $b->keterangan ?></td>
+                                        <td><?php echo $a->judul ?></td>
+                                        <td><?php echo $a->isi ?></td>
+                                        <td><?php echo $a->tgl_update ?></td>
                                         <td>
 
-                                            <!-- <div class="img-wrapper">
-                                                <a href="<?php echo base_url().'img/gambar/'. $b->gambar ?>" data-lightbox="gallery">
-                                                <img class="img-responsive" src="<?php echo base_url().'img/gambar/'. $b->gambar ?>">
-                                                    <div class="overlay">
-                                                        <div>
-                                                            <span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div> -->
-
-                                            <a href="<?php echo base_url().'img/gambar/'. $b->gambar ?>" data-lightbox="gallery">
-                                            <img style="height: 200px;width: 300px" src="<?php echo base_url().'img/gambar/'. $b->gambar ?>">
-                                            </a>
-
-                                        </td>
-                                        <td><?php echo $b->tgl_update ?></td>
-                                        <td>
                                             <div class="dropdown">
                                               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Action
@@ -150,91 +160,81 @@
                                               </button>
                                               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                                 <li>
-                                                    <a type="button" href="<?php echo base_url().'Admin/Gallery/doDelete/'. $b->no ?>" >Hapus</a>
+                                                    <a type="button" href="<?php echo base_url().'Admin/Article/doDelete/'. $a->no ?>">Hapus</a>
                                                 </li>
-                                                <li class="divider"></li>
                                                 <li>
-                                                    <a type="button" onclick="editGalleryy('<?php echo $b->no ?>')" data-toggle="modal" data-target="#editGallery">Edit</a>
+
+                                                    <a type="button" onclick="editArticlee('<?php echo $a->no ?>')" data-toggle="modal" data-target="#editArticle">Edit</a>
+
                                                 </li>
                                               </ul>
                                             </div>
+
                                         </td>
                                     </tr>
                                     <?php } ?>
                                 </tbody>
-                            </table>                    
+                            </table>                         
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>        
+                    </div> -->
         </div>
     </div>
+        <!-- /#page-wrapper -->
+        <!-- <button type="button" id="add" class="btn btn-primary btn-circle btn-xl" data-toggle="modal" data-target="#addArticle"><i class="fa fa-plus"></i></button> -->
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="addGallery">
+    <div class="modal fade" tabindex="-1" role="dialog" id="addArticle">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Tambah Gallery</h4>
+            <h4 class="modal-title">Tambah Artikel</h4>
           </div>
           <div class="modal-body">
-            <?php echo form_open_multipart('Admin/Gallery/addGallery');?>
-            <form id="createForm">
-              <fieldset>
-                  <input class="form-control" placeholder="Judul" name="judull" type="text" required>
-                  <br>
-                  <textarea class="form-control" placeholder="Keterangan" name="ket" rows="3"></textarea>
-                  <br>
-                  <p>Upload foto disini . .</p>
-                  <input foto disini" type="file" name="img" required >
-                  <br>
-                  <!-- <p><?php echo $error; ?></p> -->
-                  <input type="submit" class="btn btn-primary pull pull-right" value="Add Gallery"/>
-                  <button style="margin-right: 10px" type="button" class="btn btn-default pull pull-right" data-dismiss="modal">Close</button>
-                  <?php echo form_close(); ?><br>
-              </fieldset>
-            </form>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="editGallery">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Edit Gallery</h4>
-          </div>
-          <div class="modal-body">
-            <?php echo form_open_multipart('Admin/Gallery/editGallery');?>
-            <form>
+            <form role="form" method="post" action="<?php echo base_url().'Admin/Article/addArticle'?>">
                 <fieldset>
-                    <input type="text" name="noo" id="noo" hidden>
-                    <input class="form-control" id="judull" name="judull" type="text" required>
+                    <input class="form-control" placeholder="Judul" name="judull" type="text" required>
                     <br>
-                    <textarea class="form-control" id="ket" name="ket" rows="3" required></textarea>
+                    <textarea class="form-control" placeholder="Isi" name="isi" rows="3"></textarea>
                     <br>
-                    <p>Upload foto disini . .</p>
-                    <input type="file" name="img">
-                    <br>
-                    <!-- <p><?php echo $error; ?></p> -->
-                    <input type="submit" class="btn btn-primary pull pull-right" value="Update"/>
+                    <input type="submit" class="btn btn-primary pull pull-right" value="Save Article"/>
                     <button style="margin-right: 10px" type="button" class="btn btn-default pull pull-right" data-dismiss="modal">Close</button>
                     <?php echo form_close(); ?><br>
                 </fieldset>
             </form>
           </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="editArticle">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Edit Artikel</h4>
+          </div>
+          <div class="modal-body">
+
+            <form role="form" method="post" id="editForm" action="<?php echo base_url().'Admin/Article/editArticle'?>">
+                <fieldset>
+                    <input id="noo" type="text" name="noo" hidden>
+                    <input class="form-control" id="judull" name="judull" type="text" required>
+                    <br>
+                    <textarea class="form-control" id="isi" name="isi" rows="3"></textarea>
+                    <br>
+                    <input type="submit" class="btn btn-primary pull pull-right" value="Update"/>
+                    <button style="margin-right: 10px" type="button" class="btn btn-default pull pull-right" data-dismiss="modal">Close</button>
+                    <?php echo form_close(); ?><br>
+                </fieldset>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="<?php echo base_url().'assets/admin_bootstrap/vendor/jquery/jquery.min.js' ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url("assets/js/lightbox.js"); ?>"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url().'assets/admin_bootstrap/vendor/bootstrap/js/bootstrap.min.js' ?>"></script>
@@ -247,6 +247,15 @@
     <script src="<?php echo base_url().'assets/admin_bootstrap/vendor/datatables-plugins/dataTables.bootstrap.min.js' ?>"></script>
     <script src="<?php echo base_url().'assets/admin_bootstrap/vendor/datatables-responsive/dataTables.responsive.js' ?>"></script>
     <script src="<?php echo base_url().'assets/admin_bootstrap/custom/admin.js' ?>"></script>
+    <script src="<?php echo base_url().'assets/dist/summernote.js' ?>"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote({
+                height: 300,
+            });
+        });
+    </script>
 
 </body>
 

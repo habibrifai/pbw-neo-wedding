@@ -32,26 +32,26 @@ $(document).ready(function() {
 // 	})
 // }
 
-function editArticlee($no){
-	if($no){
-		$.ajax({
-			url: 'Article/getSelectedArticle/'+$no,
-			type: 'post',
-			dataType: 'json',
-			success:function(response){
+// function editArticlee($no){
+// 	if($no){
+// 		$.ajax({
+// 			url: 'Article/getSelectedArticle/'+$no,
+// 			type: 'post',
+// 			dataType: 'json',
+// 			success:function(response){
 
-				// alert(response);
-				// alert(val.(response->no));
+// 				// alert(response);
+// 				// alert(val.(response->no));
 
-				$('#noo').val(response.no);
-				$('#judull').val(response.judul);
-				$('#isi').val(response.isi);
-			}
-		});
-	} else {
-		alert('error');
-	}
-}
+// 				$('#noo').val(response.no);
+// 				$('#judull').val(response.judul);
+// 				$('#isi').val(response.isi);
+// 			}
+// 		});
+// 	} else {
+// 		alert('error');
+// 	}
+// }
 
 function editGalleryy($no){
 	if($no){

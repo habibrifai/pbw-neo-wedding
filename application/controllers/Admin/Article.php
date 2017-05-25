@@ -15,16 +15,20 @@ class Article extends CI_Controller{
     }
 
     function index(){
-        $session = $this->session->userdata('session');
-        $data['ses'] = $session['user'];
+        // $session = $this->session->userdata('session');
+        // $data['ses'] = $session['user'];
         $data['article'] = $this->M_model->get_data('article')->result();
         $this->load->view('admin/article', $data);    
+    }
+
+    function showAdd(){
+        $this->load->view('admin/artikel');    
     }
 
     function addArticle(){
         $data = array(
                 'judul' => $this->input->post('judull'),
-                'isi' => $this->input->post('isi'),
+                'isi' => $this->input->post('txtArtikel'),
                 'tgl_update' => date('Y-m-d H:i:s'));
         $this->M_model->inputData($data,'article');
         redirect(base_url().'Admin/Article');
@@ -46,20 +50,24 @@ class Article extends CI_Controller{
     //     // var_dump($data['edit']);
     // }
 
-    function getSelectedArticle($nomor){
-        $data = $this->M_model->get_item($nomor, 'article')->row_array();
-        echo json_encode($data);
-    }
+    // function getSelectedArticle($nomor){
+    //     $data = $this->M_model->get_item($nomor, 'article')->row_array();
+    //     echo json_encode($data);
+    // }
 
-    function editArticle(){
-        $nomor = $this->input->post('noo');
+    function updateArticle($no){
         $datab = array(
             'judul' => $this->input->post('judull'),
-            'isi' => $this->input->post('isi'),
+            'isi' => $this->input->post('txtArtikel'),
             'tgl_update' => date('Y-m-d H:i:s')
         );
-        $this->M_model->update($nomor,$datab,'article');
+        $this->M_model->update($no,$datab,'article');
         redirect(base_url().'Admin/Article');
+    }
+
+    function editArtikel($no){
+        $data['artikel'] = $this->M_model->get_item($no, 'article')->result();
+        $this->load->view('admin/artikel', $data);
     }
 }
 ?>

@@ -43,8 +43,6 @@ class Gallery extends CI_Controller{
         } else {
             $fileUpload = $this->upload->data();
 
-
-
             $datab = array(
                 'judul' => $this->input->post('judull'),
                 'keterangan' => $this->input->post('ket'),

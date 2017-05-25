@@ -101,23 +101,28 @@
       <div class="text-center garis">
         <h2 class="title-center"><strong>Kirim Pesan</strong></h2>
       </div>
-			<form>
+			<form role="form" method="post" id="message" action="<?php echo base_url().'Home/Kontak/sendMessage'?>">
+			<?php if($this->session->flashdata('success')){ ?>
+      			<br><div class='alert alert-success'><p class="text-center"><?php echo $this->session->flashdata('success'); ?></p></div>
+			<?php } else if($this->session->flashdata('error')) { ?>
+				<div class='alert alert-warning'><p class="text-center"><?php echo $this->session->flashdata('error'); ?></p></div>
+			<?php } ?> 
 				<div class="row">
 				  <div class="form-group col-md-6 col-sm-12">
 						<label>Name</label>
-						<input type="text" class="form-control">
+						<input type="text" name="name" class="form-control" required>
 					</div>
 					<div class="form-group col-md-6 col-sm-12">
 						<label>Email</label>
-						<input type="text" class="form-control">
+						<input type="text" name="email" class="form-control" required>
 					</div>
 					<div class="form-group col-md-12">
 						<label>Pesan</label>
-						<textarea type="text" class="form-control" rows="7"></textarea>
+						<textarea type="text" name="message" class="form-control" rows="7" required></textarea>
 					</div>
 					<div class="form-group col-md-12">
-						<input type="hidden" name="save" value="submit">
-						<button type="submit" class="btn btn-default">Kirim</button>
+						<!-- <input type="hidden" name="save" value="submit"> -->
+						<input type="submit" class="btn btn-default" value="Kirim">
 					</div>
 				</div>
 			</form>
