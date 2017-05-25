@@ -15,8 +15,8 @@ class Gallery extends CI_Controller{
     }
 
     function index(){
-        $session = $this->session->userdata('session');
-        $data['ses'] = $session['user'];
+        // $session = $this->session->userdata('session');
+        // $data['ses'] = $session['user'];
         $data['gallery'] = $this->M_model->get_data('gallery')->result();
         $this->load->view('admin/gallery', $data);  
     }
@@ -30,12 +30,12 @@ class Gallery extends CI_Controller{
         $config['encrypt_name']         = TRUE;
 
         $this->load->library('upload', $config);
-        $session = $this->session->userdata('session');
+        // $session = $this->session->userdata('session');
         // $data['ses'] = $session['user'];
         // $time = array('last_login' => date('Y-m-d H:i:s'));
 
         if ( ! $this->upload->do_upload('img')){
-            $data['ses'] = $session['user'];
+            // $data['ses'] = $session['user'];
             $data['error'] = $this->upload->display_errors();
             $data['gallery'] = $this->M_model->get_data('gallery')->result();
             $this->load->view('admin/gallery', $data);
@@ -87,11 +87,11 @@ class Gallery extends CI_Controller{
         $config['encrypt_name']         = TRUE;
 
         $this->load->library('upload', $config);
-        $session = $this->session->userdata('session');
+        // $session = $this->session->userdata('session');
 
         if(isset($_FILES['img']) && $_FILES['img']['size'] > 0){
             if (! $this->upload->do_upload('img')){
-                $data['ses'] = $session['user'];
+                // $data['ses'] = $session['user'];
                 $data['error1'] = $this->upload->display_errors();
                 $data['gallery'] = $this->M_model->get_data('gallery')->result();
                 $this->load->view('admin/gallery', $data);
