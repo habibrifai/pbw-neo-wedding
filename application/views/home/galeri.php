@@ -72,11 +72,7 @@
 									<div class="overlay">
 										<diV>
 											<span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
-<<<<<<< HEAD
-											<h4><?php echo $b->judul; ?></h4>
-=======
 											<h4><?php echo $b ->judul;?></h4>
->>>>>>> 63db7565bf21cbbbc7b3f8d412e5d88c7fea21a4
 										</div>
 									</div>
 								</a>
