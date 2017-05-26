@@ -29,7 +29,7 @@ class Article extends CI_Controller{
         $data = array(
                 'judul' => $this->input->post('judull'),
                 'isi' => $this->input->post('txtArtikel'),
-                'tgl_update' => date('Y-m-d H:i:s'));
+                'tgl_update' => date('d-m-Y H:i:s'));
         $this->M_model->inputData($data,'article');
         redirect(base_url().'Admin/Article');
     }
