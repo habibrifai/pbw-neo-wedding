@@ -12,9 +12,9 @@
 	<body>
 
 		<section>
-			<nav class = "navbar navbar-transparent navbar-inverse navbar-fixed-top animated fadeIn">
+			<nav class = "navbar-default navbar-inverse navbar-fixed-top">
 					<div class="navbar-header">
-						<img class="navbar-brand" src="<?php echo base_url("img/logo.png"); ?>">
+						<img class="navbar-brand" src="<?php echo base_url("img/NSM-Square.png"); ?>">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 							<span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
@@ -30,60 +30,30 @@
 						</ul>
 					</div>
 			</nav>
-
-			<div id = "newCarousel" class="carousel slide" >
-				<ol class="carousel-indicators">
-					<li data-target="#newCarousel" data-slide-to ="0" class="active"></li>
-					<li data-target="#newCarousel" data-slide-to ="1" ></li>
-					<li data-target="#newCarousel" data-slide-to ="2" ></li>
-				</ol>
-				<div class="carousel-inner" >
-					<div class="item active img1">
-					</div>
-					<div class="item img2">
-					</div>
-					<div class="item img3">
-					</div>
-			  </div>
-				<a class="carousel-control left" href="#newCarousel" data-slide="prev">
-					<span class ="icon-prev"></span>
-				</a>
-				<a class="carousel-control right" href="#newCarousel" data-slide="next">
-					<span class ="icon-next"></span>
-				</a>
-			</div>
 		</section>
 
-			<!-- <div class="container-fluid">
-				<div class="row row1">
-				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/planning.jpg"); ?>"></div>
-				  <div class="col-sm-6 garis" >
-						<h3 class="text-center">Reliable</h3>
-						<p class="text-center">Percayakanlah pernikahan anda kepada kami</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<img src="<?php echo base_url("img/planning.jpg"); ?>">
-			</div>
-			<div id="text" class="box">
-				<h3>Text</h3>
-					<p>Text yang lebih panjang</p>
-			</div> -->
+	 <div class="container text-center">
+		 <div class="row">
+			 <div class="col-sm-12 blog-main">
+				 <div class="blog-post bordered">
+					 <img class="img-responsive img-article" src="<?php echo base_url("/img/slider/lul1.jpg")?>">
+					 <h2 class="judul-blog">First Post</h2>
+					 <p class="blog-post-meta">January 1, 2014</p>
+					 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 
+					 <a href="#" class="btn btn-primary">Read More</a>
+				 </div><!-- /.blog-post -->
+				 <div class="blog-post bordered">
+					 <img class="img-responsive img-article" src="<?php echo base_url("/img/slider/lul1.jpg")?>">
+					 <h2 class="judul-blog">First Post</h2>
+					 <p class="blog-post-meta">January 1, 2014</p>
+					 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 
-		<div class="container">
-		  <div class="wrapper">
-		    <div class="row ">
-        <?php foreach($article as $b){ ?>
-	          	<?php echo $b->judul ?>
-	          	<?php echo $b->isi ?>
-	    	<?php } ?>
-        </div>
-			</div>
+					 <a href="#" class="btn btn-primary">Read More</a>
+				 </div><!-- /.blog-post -->
+			 </div>
+		 </div>
 		</div>
-
-
 		<section class="text-center">
 			<footer id="footer" class="dark">
 				<div class="container ">
