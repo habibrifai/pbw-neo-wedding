@@ -38,6 +38,25 @@
 					<li data-target="#newCarousel" data-slide-to ="2" ></li>
 				</ol>
 				<div class="carousel-inner slider" >
+<<<<<<< HEAD
+=======
+					<header class="intro">
+						<div class="intro-body">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2">
+											<h1 class="brand-heading">NEO WEDDING ORGANIZER</h1>
+											<p class="intro-text">A free, responsive, one page Bootstrap theme.
+													<br>Created by Start Bootstrap.</p>
+											<a href="#about" class="btn btn-circle page-scroll">
+													<i class="fa fa-angle-double-down animated"></i>
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+>>>>>>> 63db7565bf21cbbbc7b3f8d412e5d88c7fea21a4
 					<div class="item active img1">
 						<header class="intro">
 							<div class="intro-body">

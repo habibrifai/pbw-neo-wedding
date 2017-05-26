@@ -15,7 +15,7 @@ class Galeri extends CI_Controller {
 		$config = array();
         $config["base_url"] = base_url().'Home/Galeri/index/';
         $config["total_rows"] = $this->M_model->record_count('gallery');
-        $config["per_page"] = 12;
+        $config["per_page"] = 6;
         $config["uri_segment"] = 4;
         $limit = $config["per_page"];
 
