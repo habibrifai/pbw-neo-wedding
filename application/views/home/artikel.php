@@ -12,7 +12,7 @@
 	<body>
 
 		<section>
-			<nav class = "navbar-default navbar-inverse navbar-fixed-top">
+			<nav class = "navbar-default navbar-inverse navbar-fixed-top animated fadeIn">
 					<div class="navbar-header">
 						<img class="navbar-brand" src="<?php echo base_url("img/NSM-Square.png"); ?>">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">

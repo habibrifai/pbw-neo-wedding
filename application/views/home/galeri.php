@@ -1,8 +1,6 @@
-
 <html lang="en">
 	<head>
 		  <title>Neo Wedding Organizer</title>
-			<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 			<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
 			<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css"); ?>" />
 			<link rel="stylesheet" href="<?php echo base_url("assets/css/beranda-style.min.css"); ?>" />
@@ -18,7 +16,7 @@
 	</head>
 	<body>
 		<section>
-			<nav class = "navbar navbar-transparent navbar-inverse navbar-fixed-top animated fadeIn">
+			<nav class = "navbar-default navbar-inverse navbar-fixed-top animated fadeIn">
 					<div class="navbar-header">
 						<img class="navbar-brand" src="<?php echo base_url("img/NSM-Square.png"); ?>">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -37,7 +35,7 @@
 					</div>
 			</nav>
 
-			<div id = "newCarousel" class="carousel slide" >
+			<!-- <div id = "newCarousel" class="carousel slide" >
 				<ol class="carousel-indicators">
 					<li data-target="#newCarousel" data-slide-to ="0" class="active"></li>
 					<li data-target="#newCarousel" data-slide-to ="1" ></li>
@@ -57,7 +55,7 @@
 				<a class="carousel-control right" href="#newCarousel" data-slide="next">
 					<span class ="icon-next"></span>
 				</a>
-			</div>
+			</div> -->
 		</section>
 
 		<section class=galeri>
