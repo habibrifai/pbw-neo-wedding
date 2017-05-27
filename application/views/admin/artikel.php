@@ -90,10 +90,14 @@
 
                             <?php if(isset($artikel)){ ?>
                                 <?php foreach ($artikel as $a) { ?>
-                            
-                                <form role="form" method="post" action="<?php echo base_url().'Admin/Article/updateArticle/'.$a->no ?>">
+                                <?php echo form_open_multipart('Admin/Article/updateArticle');?>
+                                <form>
                                     <fieldset>
+                                        <input type="text" name="noo" id="noo" value="<?php echo $a->no ?>" hidden>
                                         <input class="form-control" placeholder="Judul" value="<?php echo $a->judul ?>" name="judull" type="text" required>
+                                        <br>
+                                        <p>Upload gambar disini . .</p>
+                                        <input type="file" name="gbr">
                                         <br>
                                         <textarea name="txtArtikel" id="summernote"><?php echo $a->isi ?></textarea>
                                         <br>
@@ -103,15 +107,20 @@
                                 </form>
                                 <?php } ?>
                             <?php } else { ?>
-                                <form role="form" method="post" action="<?php echo base_url().'Admin/Article/addArticle/' ?>">
+                                <?php echo form_open_multipart('Admin/Article/addArticle');?>
+                                <form>
                                     <fieldset>
                                         <input class="form-control" placeholder="Judul" name="judull" type="text" required>
+                                        <br>
+                                        <p>Upload gambar disini . .</p>
+                                        <input type="file" name="gbr">
                                         <br>
                                         <textarea name="txtArtikel" id="summernote"></textarea>
                                         <br>
                                         <input type="submit" class="btn btn-primary pull pull-right" value="Save Article"/>
                                         <?php echo form_close(); ?><br>
                                     </fieldset>
+                                    <?php echo form_close(); ?><br>
                                 </form>
                             <?php } ?>
                         </div>

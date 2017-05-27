@@ -1,14 +1,5 @@
 <!DOCTYPE html>
-<?php
-	define("DB_SERVER", "localhost");
-	define("DB_USER", "root");
-	define("DB_PASSWORD", "");
-	define("DB_DATABASE", "db_event");
-	$query = "SELECT * FROM article";
-	$conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE) or
-	die("Could not connect: " . mysql_error());
-	$article = mysqli_query($conn,$query);
-?>
+
 <html lang="en">
 	<head>
 	<title>Neo Wedding Organizer</title>
@@ -45,26 +36,19 @@
 	 <div class="container text-center">
 		 <div class="row">
 			 <div class="col-sm-12 blog-main">
-				 <?php
-
-					 var_dump($article);
-
-						while($row=$article->fetch_assoc()){
-				 ?>
+				 <?php foreach ($artikel as $a) { ?>
 					 <div class="blog-post bordered">
-						 <img class="img-responsive img-article" src="<?php echo base_url("/img/slider/lul1.jpg")?>">
-						 <h2 class="judul-blog"><?php echo $row['judul'];?></h2>
-						 <p class="blog-post-meta"><?php echo $row['tgl_update'];?>/p>
+						 <img class="img-responsive img-article" src="<?php echo base_url('img/artikel/'.$a->gambar)?>">
+						 <h2 class="judul-blog"><?php echo $a->judul; ?></h2>
+						 <p class="blog-post-meta"><?php echo $a->tgl_update; ?></p>
 						 <p>
-							 <?php $body=$row['isi'];
-						 		echo substr($body, 0, 700)."...";
-						 		?>
-					 		</p>
-						 <a href="#" class="btn btn-primary">Read More</a>
+							<?php $isi = $a->isi;
+								echo substr($isi, 0, 700)."....";
+						 	?>
+					 	 </p><br><br>
+						 <a href="#" class="btn btn-primary">Read More</a><br><br><br><br><br><br>
 					 </div><!-- /.blog-post -->
-				 <?php
-			 		}
-				 ?>
+				 <?php } ?>
 			 </div>
 		 </div>
 		</div>

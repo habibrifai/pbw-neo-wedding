@@ -28,6 +28,7 @@
 
     <!-- Custom Fonts -->
     <link href="<?php echo base_url().'assets/admin_bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet' ?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/lightbox.css"); ?>" />
 
 </head>
 
@@ -78,6 +79,13 @@
 
         <div id="page-wrapper">
             <div class="row">
+            <?php
+                if(isset($error)){
+                    echo "<div class='alert alert-danger'>$error</div>";
+                } else if(isset($error1)){
+                    echo "<div class='alert alert-danger'>$error1</div>";
+                }
+            ?>
                 <div class="col-lg-12">
                     <h1 class="page-header">Article</h1>
                 </div>
@@ -102,6 +110,7 @@
                                         <th>No</th>
                                         <th>Judul</th>
                                         <th>Isi</th>
+                                        <th>Gambar</th>
                                         <th>Tanggal Update</th>
                                         <th>Option</th>
                                     </tr>
@@ -113,7 +122,12 @@
                                     <!-- <?php echo $a->no ?> -->
                                         <td><?php echo $i++; ?></td>
                                         <td><?php echo $a->judul ?></td>
-                                        <td><?php echo $a->isi ?></td>
+                                        <td><?php echo substr($a->isi, 0, 700)."..."; ?></td>
+                                        <td>
+                                            <a href="<?php echo base_url().'img/artikel/'. $a->gambar ?>" data-lightbox="article">
+                                            <img style="height: 200px;width: 300px" src="<?php echo base_url().'img/artikel/'. $a->gambar ?>">
+                                            </a>
+                                        </td>
                                         <td><?php echo $a->tgl_update ?></td>
                                         <td>
 
@@ -178,6 +192,7 @@
 
     <!-- jQuery -->
     <script src="<?php echo base_url().'assets/admin_bootstrap/vendor/jquery/jquery.min.js' ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url("assets/js/lightbox.js"); ?>"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url().'assets/admin_bootstrap/vendor/bootstrap/js/bootstrap.min.js' ?>"></script>

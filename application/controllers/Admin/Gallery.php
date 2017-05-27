@@ -24,9 +24,9 @@ class Gallery extends CI_Controller{
     function addGallery(){
         $config['upload_path']          = './img/gambar/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
-        $config['max_size']             = 0;
-        $config['max_width']            = 0;
-        $config['max_height']           = 0;
+        $config['max_size']             = 1000;
+        $config['max_width']            = 2048;
+        $config['max_height']           = 2048;
         $config['encrypt_name']         = TRUE;
 
         $this->load->library('upload', $config);
@@ -79,7 +79,7 @@ class Gallery extends CI_Controller{
     function editGallery(){
         $config['upload_path']          = './img/gambar/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
-        $config['max_size']             = 0;
+        $config['max_size']             = 1000;
         $config['max_width']            = 2048;
         $config['max_height']           = 2048;
         $config['encrypt_name']         = TRUE;
