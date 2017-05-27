@@ -38,7 +38,7 @@
 			 	 <?php foreach ($artikel as $a) { ?>
 					 <div class="blog-post bordered">
 						 <img class="img-responsive img-article" src="<?php echo base_url('img/artikel/'.$a->gambar)?>">
-						 <h2 class="judul-blog"><a href=""><?php echo $a->judul;?></h2>
+						 <h2 class="judul-blog"><?php echo $a->judul;?></h2>
 						 <p class="blog-post-meta"><?php echo $a->tgl_update;?></p>
 						 <p><?php echo $a->isi; ?></p>
 						 <!-- <a href="<?php echo $row['no']?>" class="btn btn-primary">Read More</a> -->
