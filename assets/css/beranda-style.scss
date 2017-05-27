@@ -169,10 +169,13 @@ h2:before, h2:after {
   padding:100px 0;
   text-align:center;
   color:#fff;
+  position: absolute;
+  z-index: 3;
 }
 .intro .intro-body{
   display:table-cell;
   vertical-align:middle;
+  position: relative;
 }
 .intro-body .brand-heading{
   font-size:40px;
@@ -313,10 +316,10 @@ h2:before, h2:after {
 {
   align-items:center;
   height: 255;
-  width: 100%;
   //position: relative;
-  display: block;
+  display: flex;
   overflow: hidden;
+  justify-content: center;
   .overlay{
     background: rgba(0,0,0,0.5);
     position: absolute;
@@ -334,9 +337,23 @@ h2:before, h2:after {
     display: flex;
     .fa{
       position: relative;
-      font-size: 4em;
-      color: white;
+      font-size: 3em;
+      font-weight: lighter;
+      color: #f99a00;
     }
+  }
+  a{
+    img{
+      flex-shrink: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .overlay{
+      span{
+        padding: -50px;
+      }
   }
   &:hover{
     .overlay{
@@ -344,10 +361,12 @@ h2:before, h2:after {
       h4{
         color: #fff;
       }
+      span{
+        padding-bottom: 100px;
+        transition: all .3s ease-in-out;
+      }
     }
     img{
-      height: 255;
-      width: 100%;
       box-shadow: 0 0 7px rgba(0,0,0, 0.5);
       transition: all .3s ease-in-out;
       transform: scale(1.5) rotate(5deg);
