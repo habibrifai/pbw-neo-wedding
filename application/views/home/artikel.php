@@ -46,7 +46,7 @@
 								echo substr($isi, 0, 700)."....";
 						 	?>
 					 	 </p><br><br>
-						 <a href="#" class="btn btn-primary">Read More</a><br><br><br><br><br><br>
+						 <a href="<?php echo base_url().'Home/Artikel/artikelMore/'.$a->no ?>" class="btn btn-primary">Read More</a><br><br><br><br><br><br>
 					 </div><!-- /.blog-post -->
 				 <?php } ?>
 			 </div>

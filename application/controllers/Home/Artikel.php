@@ -15,5 +15,10 @@ class Artikel extends CI_Controller {
 		$this->load->view('home/artikel', $data);
 	}
 
+	function artikelMore($no){
+		$data['artikel'] = $this->M_model->get_item($no, 'article')->result();
+		$this->load->view('home/artikel_more', $data);
+	}
+
 }
 ?>
