@@ -20,10 +20,37 @@ $document.scroll(function() {
       $element.removeClass(fadeInDown);
     }
 });*/
+if ( window.location.hash ) scroll(0,0);
+// void some browsers issue
+setTimeout( function() { scroll(0,0); }, 1);
+
+
+
 $(function(){
+  // your current click function
+  $('.redirect-scroll').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top
+      }, 1000, 'swing');
+  });
+
+  // *only* if we have anchor on the url
+  if(window.location.hash) {
+      // smooth scroll to the anchor id
+      $('html, body').animate({
+          scrollTop: $(window.location.hash).offset().top + 'px'
+      }, 1000, 'swing');
+  }
+
   if($(window).width() < 768){
     jQuery.fx.off = true;
   }
+  $('.link-kontak').click(function () {
+        $('.navbar a').removeClass('active');
+        $(this).addClass('active');
+  });
+
   $(".btn-circle").on('click', function(event) {
       event.preventDefault();
       var target =$('#about');
@@ -33,10 +60,20 @@ $(function(){
   });
 
   $(".link-kontak").on('click', function(event) {
+    if (window.location.hash != null && window.location.hash != '') {
       event.preventDefault();
-      var target =$('#same-page');
+      var target =$('#kontak-neo');
       $('html, body').animate({
-        scrollTop: target.offset().top
+        scrollTop: (target.offset().top-50)
+      }, 600);
+    }
+  });
+
+  $(".link-kontak").on('click', function(event) {
+      event.preventDefault();
+      var target =$('#kontak-neo');
+      $('html, body').animate({
+        scrollTop: (target.offset().top-50)
       }, 600);
   });
 

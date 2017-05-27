@@ -123,23 +123,27 @@ h2:before, h2:after {
     background: url("../../img/slider/slide1.png") no-repeat center center fixed;
   }
   .img2{
-    background: url("../../img/slider/slide2.jpg") no-repeat center center fixed;
+    background: url("../../img/slider/slide2.png") no-repeat center center fixed;
   }
   .img3{
-    background: url("../../img/slider/slide3.jpg") no-repeat center center fixed;
+    background: url("../../img/slider/slide3.png") no-repeat center center fixed;
   }
   .item{
     max-width: 100%;
     background-size: cover;
     background-attachment: fixed;
   }
-
+  align-content: center;
+}
+.carousel-control{
+  z-index: 4;
 }
 .slider{
   .item{
     min-height: 677px;
   }
 }
+
 .body-text {
   position: relative;
   z-index: 10;
@@ -161,15 +165,15 @@ h2:before, h2:after {
 }
 //------------------------------------------------------------------------------
 
-// INNER CAROUSEL---------------------------------------------------------------
+// STATIC TEXT CAROUSEL---------------------------------------------------------------
 .intro{
   width:100%;
   display:table;
   height:auto;
-  padding:100px 0;
   text-align:center;
   color:#fff;
   position: absolute;
+  padding: 100px 0;
   z-index: 3;
 }
 .intro .intro-body{

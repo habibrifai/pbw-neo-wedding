@@ -26,7 +26,7 @@
 							<li><a href="<?php echo base_url()?>" class ="active">BERANDA</a></li>
 							<li><a href="<?php echo base_url().'Home/Galeri'?>">GALERI</a></li>
 							<li><a href="<?php echo base_url().'Home/Artikel'?>">ARTIKEL</a></li>
-							<li><a class="link-kontak" href="#same-page">KONTAK</a></li>
+							<li><a class="link-kontak" href="#kontak-neo">KONTAK</a></li>
 						</ul>
 					</div>
 			</nav>
@@ -38,36 +38,38 @@
 					<li data-target="#newCarousel" data-slide-to ="2" ></li>
 				</ol>
 				<div class="carousel-inner slider" >
+
+					<header class="intro">
+						<div class="intro-body">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2">
+											<h1 class="brand-heading">NEO WEDDING ORGANIZER</h1>
+											<p class="intro-text">A free, responsive, one page Bootstrap theme.
+													<br>Created by Start Bootstrap.</p>
+											<a href="#about" class="btn btn-circle page-scroll">
+													<i class="fa fa-angle-double-down animated"></i>
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
 					<div class="item active img1">
 					</div>
 					<div class="item img2">
 					</div>
 					<div class="item img3">
 					</div>
+					<a class="carousel-control left" href="#newCarousel" data-slide="prev">
+						<span class ="icon-prev"></span>
+					</a>
+					<a class="carousel-control right" href="#newCarousel" data-slide="next">
+						<span class ="icon-next"></span>
+					</a>
 			  </div>
-				<a class="carousel-control left" href="#newCarousel" data-slide="prev">
-					<span class ="icon-prev"></span>
-				</a>
-				<a class="carousel-control right" href="#newCarousel" data-slide="next">
-					<span class ="icon-next"></span>
-				</a>
+
 			</div>
-			<header class="intro">
-				<div class="intro-body">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2">
-									<h1 class="brand-heading">NEO WEDDING ORGANIZER</h1>
-									<p class="intro-text">A free, responsive, one page Bootstrap theme.
-											<br>Created by Start Bootstrap.</p>
-									<a href="#about" class="btn btn-circle page-scroll">
-											<i class="fa fa-angle-double-down animated"></i>
-									</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
 		</section>
 
 			<div id="about" class="container-fluid">
@@ -143,7 +145,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="same-page" class="kontak">
+		<section id="kontak-neo" class="kontak">
       <div class="container text-center garis">
         <h2 class="title-center"><strong>Hubungi Kami</strong></h2>
       </div>

@@ -30,7 +30,7 @@
 							<li><a href="<?php echo base_url()?>" >BERANDA</a></li>
 							<li><a href="<?php echo site_url().'Home/Galeri'?>" class ="active">GALERI</a></li>
 							<li><a href="<?php echo site_url().'Home/Artikel'?>">ARTIKEL</a></li>
-							<li><a href="<?php echo site_url().'Home/Kontak'?>">KONTAK</a></li>
+							<li><a class="redirect-scroll" href="<?php echo site_url().'#kontak-neo'?>">KONTAK</a></li>
 						</ul>
 					</div>
 			</nav>
