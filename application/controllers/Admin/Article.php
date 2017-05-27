@@ -47,7 +47,7 @@ class Article extends CI_Controller{
                 'judul' => $this->input->post('judull'),
                 'gambar' =>$fileUpload['file_name'],
                 'isi' => $this->input->post('txtArtikel'),
-                'tgl_update' => date('d-m-Y H:i:s')
+                'tgl_update' => date('d F Y',strtotime(date('d-m-Y')))
             );
             $this->M_model->inputData($data,'article');
             redirect(base_url().'Admin/Article');
@@ -101,7 +101,7 @@ class Article extends CI_Controller{
                     'judul' => $this->input->post('judull'),
                     'isi' => $this->input->post('txtArtikel'),
                     'gambar' => $fileUpload['file_name'],
-                    'tgl_update' => date('d-m-Y H:i:s')
+                    'tgl_update' => date('d F Y',strtotime(date('d-m-Y')))
                 );
                 $this->M_model->update($nomor,$datab, 'article');
                 redirect(base_url().'Admin/Article');

@@ -47,7 +47,7 @@ class Gallery extends CI_Controller{
                 'judul' => $this->input->post('judull'),
                 'keterangan' => $this->input->post('ket'),
                 'gambar' => $fileUpload['file_name'],
-                'tgl_update' => date('Y-m-d H:i:s')
+                'tgl_update' => date('d F Y',strtotime(date('d-m-Y')))
             );
             $this->M_model->inputData($datab, 'gallery');
             redirect(base_url().'Admin/Gallery');
@@ -101,7 +101,7 @@ class Gallery extends CI_Controller{
                     'judul' => $this->input->post('judull'),
                     'keterangan' => $this->input->post('ket'),
                     'gambar' => $fileUpload['file_name'],
-                    'tgl_update' => date('Y-m-d H:i:s')
+                    'tgl_update' => date('d F Y',strtotime(date('d-m-Y')))
                 );
                 $this->M_model->update($nomor,$datab, 'gallery');
                 redirect(base_url().'Admin/Gallery');
@@ -112,7 +112,7 @@ class Gallery extends CI_Controller{
                 $databb = array(
                     'judul' => $this->input->post('judull'),
                     'keterangan' => $this->input->post('ket'),
-                    'tgl_update' => date('Y-m-d H:i:s')
+                    'tgl_update' => date('d F Y',strtotime(date('d-m-Y')))
                 );
             $this->M_model->update($nomor,$databb, 'gallery');
             redirect(base_url().'Admin/Gallery');
