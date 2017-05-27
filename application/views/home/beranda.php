@@ -72,23 +72,24 @@
 			</div>
 		</section>
 
-			<div id="about" class="container-fluid">
-				<div class="row row1">
-				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/planning.jpg"); ?>"></div>
-				  <div class="col-sm-6" >
-						<h3 class="text-center garis">Reliable</h3>
-					</div>
-					<p class="text-center">Percayakanlah pernikahan anda kepada kami</p>
+		<div id="about" class="container-fluid">
+			<div class="row row1">
+			  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/trusted.png"); ?>"></div>
+			  <div class="col-sm-6" >
+					<h3 class="text-center garis">Reliable</h3>
 				</div>
+				<p class="text-center">Percayakanlah pernikahan anda kepada kami</p>
 			</div>
-				<!--<div class="box">
-					<img src="<?php echo base_url("img/planning.jpg"); ?>">
+		</div>
+		<div id="about" class="container-fluid">
+			<div class="row row1">
+			  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/trusted.png"); ?>"></div>
+			  <div class="col-sm-6" >
+					<h3 class="text-center garis">Reliable</h3>
 				</div>
-				<div id="text" class="box">
-					<h3>Text</h3>
-						<p>Text yang lebih panjang</p>
-				</div>-->
-
+				<p class="text-center">Percayakanlah pernikahan anda kepada kami</p>
+			</div>
+		</div>
 
 		<div class="container">
 		  <div class="wrapper">
