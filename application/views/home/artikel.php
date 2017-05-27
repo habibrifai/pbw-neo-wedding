@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<?php
+	define("DB_SERVER", "localhost");
+	define("DB_USER", "root");
+	define("DB_PASSWORD", "");
+	define("DB_DATABASE", "db_event");
+	$query = "SELECT * FROM article";
+	$conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE) or
+	die("Could not connect: " . mysql_error());
+	$article = mysqli_query($conn,$query);
+?>
 <html lang="en">
 	<head>
 	<title>Neo Wedding Organizer</title>
@@ -35,22 +45,26 @@
 	 <div class="container text-center">
 		 <div class="row">
 			 <div class="col-sm-12 blog-main">
-				 <div class="blog-post bordered">
-					 <img class="img-responsive img-article" src="<?php echo base_url("/img/slider/lul1.jpg")?>">
-					 <h2 class="judul-blog">First Post</h2>
-					 <p class="blog-post-meta">January 1, 2014</p>
-					 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+				 <?php
 
-					 <a href="#" class="btn btn-primary">Read More</a>
-				 </div><!-- /.blog-post -->
-				 <div class="blog-post bordered">
-					 <img class="img-responsive img-article" src="<?php echo base_url("/img/slider/lul1.jpg")?>">
-					 <h2 class="judul-blog">First Post</h2>
-					 <p class="blog-post-meta">January 1, 2014</p>
-					 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+					 var_dump($article);
 
-					 <a href="#" class="btn btn-primary">Read More</a>
-				 </div><!-- /.blog-post -->
+						while($row=$article->fetch_assoc()){
+				 ?>
+					 <div class="blog-post bordered">
+						 <img class="img-responsive img-article" src="<?php echo base_url("/img/slider/lul1.jpg")?>">
+						 <h2 class="judul-blog"><?php echo $row['judul'];?></h2>
+						 <p class="blog-post-meta"><?php echo $row['tgl_update'];?>/p>
+						 <p>
+							 <?php $body=$row['isi'];
+						 		echo substr($body, 0, 700)."...";
+						 		?>
+					 		</p>
+						 <a href="#" class="btn btn-primary">Read More</a>
+					 </div><!-- /.blog-post -->
+				 <?php
+			 		}
+				 ?>
 			 </div>
 		 </div>
 		</div>

@@ -64,7 +64,7 @@
         <div class="row ">
         <?php foreach($gallery as $b){ ?>
 	          <div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="img-wrapper">
+							<div class="img-wrapper animated fadeInUp">
 		            <a href="<?php echo base_url().'img/gambar/'.$b->gambar ?>" data-lightbox="gallery">
 									<img class="img-responsive" src="<?php echo base_url().'img/gambar/'.$b->gambar ?>">
 									<div class="overlay">

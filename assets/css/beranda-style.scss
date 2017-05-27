@@ -117,6 +117,11 @@ h2:before, h2:after {
 //------------------------------------------------------------------------------
 
 // CAROUSEL --------------------------------------------------------------------
+.carousel{
+  height: auto;
+  width: 100%;
+  display: table;
+}
 .carousel-inner {
 
   .img1{
@@ -129,7 +134,8 @@ h2:before, h2:after {
     background: url("../../img/slider/slide3.png") no-repeat center center fixed;
   }
   .item{
-    max-width: 100%;
+    height: auto;
+    width: 100%;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -179,7 +185,6 @@ h2:before, h2:after {
 .intro .intro-body{
   display:table-cell;
   vertical-align:middle;
-  position: relative;
 }
 .intro-body .brand-heading{
   font-size:40px;
@@ -642,5 +647,10 @@ h2:before, h2:after {
 		-ms-animation: none !important;
 		animation: none !important;
 	}
+}
+@media (min-width: 992px){
+  .container {
+      width: 970px;
+  }
 }
 //------------------------------------------------------------------------------

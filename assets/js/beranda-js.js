@@ -87,8 +87,6 @@ $(function(){
      $('.navbar').addClass('navbar-default');
      $('.navbar').removeClass('navbar-transparent');
      $('.navbar').addClass('fadeInDown');
-     $('.imgcol1row1').addClass('fadeInLeft');
-
    }
    else {
       //$('nav').removeClass('scrolled');
@@ -102,6 +100,9 @@ $(function(){
    }
    else{
      $('#return-to-top').fadeOut(200);
+   }
+   if($(window).scrollTop() >= 900) {
+     $('.imgcol1row1').addClass('fadeInLeft');
    }
   });
 });
