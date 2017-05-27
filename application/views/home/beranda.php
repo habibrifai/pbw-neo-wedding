@@ -26,7 +26,7 @@
 							<li><a href="<?php echo base_url()?>" class ="active">BERANDA</a></li>
 							<li><a href="<?php echo base_url().'Home/Galeri'?>">GALERI</a></li>
 							<li><a href="<?php echo base_url().'Home/Artikel'?>">ARTIKEL</a></li>
-							<li><a href="<?php echo base_url().'Home/Kontak'?>">KONTAK</a></li>
+							<li><a class="link-kontak" href="#same-page">KONTAK</a></li>
 						</ul>
 					</div>
 			</nav>
@@ -143,6 +143,71 @@
 				</div>
 			</div>
 		</section>
+		<section id="same-page" class="kontak">
+      <div class="container text-center garis">
+        <h2 class="title-center"><strong>Hubungi Kami</strong></h2>
+      </div>
+			<div class="row">
+			  <div class="col-md-3 col-sm-6">
+					<div class="card facebook">
+						<a href="https://www.facebook.com/neo.event.wedding.organizer">
+							<div class="card-front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+							<div class="card-back">Kunjungi Facebook Kami</div>
+						</a>
+					</div>
+				</div>
+			  <div class="col-md-3 col-sm-6">
+					<div class="card no-hp">
+						<a href="#">
+							<div class="card-front"><i class="fa fa-phone" aria-hidden="true"></i></div>
+							<div class="card-back">082132291570</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="card no-wa">
+						<a href="#">
+							<div class="card-front"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+							<div class="card-back">085103013553</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="card instagram">
+						<a href="https://www.instagram.com/neo.organizer/">
+							<div class="card-front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+							<div class="card-back">Kunjungi Instagram Kami</div>
+						</a>
+					</div>
+				</div>
+			</div>
+	  </section>
+
+		<section class="container pesan">
+      <div class="text-center garis">
+        <h2 class="title-center"><strong>Kirim Pesan</strong></h2>
+      </div>
+			<form>
+				<div class="row">
+				  <div class="form-group col-md-6 col-sm-12">
+						<label>Name</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group col-md-6 col-sm-12">
+						<label>Email</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group col-md-12">
+						<label>Pesan</label>
+						<textarea type="text" class="form-control" rows="7"></textarea>
+					</div>
+					<div class="form-group col-md-12">
+						<input type="hidden" name="save" value="submit">
+						<button type="submit" class="btn btn-default">Kirim</button>
+					</div>
+				</div>
+			</form>
+    </section>
 		<section class="text-center">
 			<footer id="footer" class="dark">
 				<div class="container ">
@@ -166,23 +231,20 @@
 				</div>
 			</footer>
 			<footer id="footer" class="dark">
+          <div id="copyrights">
 
-        	<!-- Copyrights
-            ============================================= -->
-            <div id="copyrights">
+              <div class="container clearfix">
 
-                <div class="container clearfix">
+                  <div class="col_half">
+                      <div class="copyrights-menu copyright-links clearfix ">
+                          <a href="#!">Beranda</a>/<a href="#">Galeri</a>/<a href="http://wemary.com/faq">Kontak</a>/<a href="http://blog.wemary.com" target="_blank">Artikel</a>
+                      </div>
+                      Copyrights &copy; 2017 All Rights Reserved by WatdelulArmy
+                  </div>
+              </div>
 
-                    <div class="col_half">
-                        <div class="copyrights-menu copyright-links clearfix ">
-                            <a href="#!">Beranda</a>/<a href="#">Galeri</a>/<a href="http://wemary.com/faq">Kontak</a>/<a href="http://blog.wemary.com" target="_blank">Artikel</a>
-                        </div>
-                        Copyrights &copy; 2017 All Rights Reserved by WatdelulArmy
-                    </div>
-                </div>
-
-            </div><!-- #copyrights end -->
-        </footer>
+          </div>
+      </footer>
 		</section>
 		<a id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 

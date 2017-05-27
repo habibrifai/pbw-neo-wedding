@@ -32,6 +32,14 @@ $(function(){
       }, 600);
   });
 
+  $(".link-kontak").on('click', function(event) {
+      event.preventDefault();
+      var target =$('#same-page');
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 600);
+  });
+
   $('#return-to-top').click(function() {      // When arrow is clicked
       $('body,html').animate({
           scrollTop :0},600);

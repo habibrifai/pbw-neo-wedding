@@ -68,7 +68,7 @@
 		            <a href="<?php echo base_url().'img/gambar/'.$b->gambar ?>" data-lightbox="gallery">
 									<img class="img-responsive" src="<?php echo base_url().'img/gambar/'.$b->gambar ?>">
 									<div class="overlay">
-										<diV>
+										<div>
 											<span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
 											<h4><?php echo $b ->judul;?></h4>
 										</div>

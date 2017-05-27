@@ -120,13 +120,13 @@ h2:before, h2:after {
 .carousel-inner {
 
   .img1{
-    background: url("../../img/slider/slide1.jpg") no-repeat center center fixed;
+    background: url("../../img/slider/slide1.png") no-repeat center center fixed;
   }
   .img2{
-    background: url("../../img/slider/lul2.jpg") no-repeat center center fixed;
+    background: url("../../img/slider/slide2.jpg") no-repeat center center fixed;
   }
   .img3{
-    background: url("../../img/slider/lul3.jpg") no-repeat center center fixed;
+    background: url("../../img/slider/slide3.jpg") no-repeat center center fixed;
   }
   .item{
     max-width: 100%;
@@ -341,6 +341,16 @@ h2:before, h2:after {
       font-weight: lighter;
       color: #f99a00;
     }
+    div{
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      -webkit-transition: 0.8s, ease-out;
+      -o-transition: 0.8s, ease-out;
+      transition: 0.8s, ease-out;
+    }
   }
   a{
     img{
@@ -350,20 +360,14 @@ h2:before, h2:after {
       object-fit: cover;
     }
   }
-  .overlay{
-      span{
-        padding: -50px;
-      }
-  }
   &:hover{
     .overlay{
       opacity: 1;
       h4{
         color: #fff;
       }
-      span{
-        padding-bottom: 100px;
-        transition: all .3s ease-in-out;
+      div{
+        bottom: 20px;
       }
     }
     img{
