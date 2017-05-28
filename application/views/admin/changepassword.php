@@ -37,7 +37,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Organizer</a>
+                <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Wedding Organizer</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
             <a class="navbar-brand" href=""><?php echo $this->session->userdata('session')['user']; ?></a>

@@ -27,7 +27,7 @@
                       <div class="copyrights-menu copyright-links clearfix ">
                           <a href="<?php echo base_url() ?>">Beranda</a>/<a href="<?php echo base_url().'Home/Galeri'?>">Galeri</a>/<a href="<?php echo base_url().'Home/Artikel'?>">Artikel</a>/<a href="<?php echo site_url().'#kontak-neo'?>">Kontak</a>
                       </div>
-                      Copyrights &copy; 2017 All Rights Reserved by WatdelulArmy
+                      Copyrights &copy; 2017 All Rights Reserved by Tech Dev
                   </div>
               </div>
 
