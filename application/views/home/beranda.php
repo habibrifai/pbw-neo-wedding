@@ -145,7 +145,15 @@
 
 		<div class="row lihat-galeri">
 			<div class="col-sm-6 col-foto-galeri ">
-
+				<section class="grid-1">
+					<div class="grid-inner">1
+						<p>px</p>
+					</div>
+					<div class="grid-inner">2</div>
+					<div class="grid-inner">3</div>
+					<div class="grid-inner">4</div>
+					<div class="grid-inner">5</div>
+				</section>
 			</div>
 			<div class="col-sm-6 col-kunjungi-galeri">
 				<p class="text-center">Kunjungi Galeri Kami<br><br><br><br><br><br></p>
