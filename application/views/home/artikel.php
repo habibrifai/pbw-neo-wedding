@@ -27,7 +27,7 @@
 							<li><a href="<?php echo base_url()?>" >BERANDA</a></li>
 							<li><a href="<?php echo base_url().'Home/Galeri'?>">GALERI</a></li>
 							<li><a href="<?php echo base_url().'Home/Artikel'?>" class ="active">ARTIKEL</a></li>
-							<li><a href="<?php echo base_url().'Home/Kontak'?>">KONTAK</a></li>
+							<li><a class="redirect-scroll" href="<?php echo site_url().'#kontak-neo'?>">KONTAK</a></li>
 						</ul>
 					</div>
 			</nav>
@@ -51,7 +51,13 @@
 				 <?php } ?>
 			 </div>
 		 </div>
-		</div>
+	 </div>
+	 <div class="row">
+        <div class="col-md-12 text-center">
+            <?php echo $links; ?>
+            <!-- <?php echo $lol; ?> -->
+        </div>
+     </div>
 		<section class="text-center">
 			<footer id="footer" class="dark">
 				<div class="container ">
