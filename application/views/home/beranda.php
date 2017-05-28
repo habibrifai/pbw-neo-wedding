@@ -192,7 +192,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="kontak-neo" class="kontak">
+	<section id="kontak-neo" class="kontak">
       <div class="container text-center garis">
         <h2 class="title-center"><strong>Hubungi Kami</strong></h2>
       </div>
@@ -236,23 +236,28 @@
       <div class="text-center garis">
         <h2 class="title-center"><strong>Kirim Pesan</strong></h2>
       </div>
-			<form>
+			<?php if($this->session->flashdata('error')) { ?>
+                <div class='alert alert-danger text-center'><?php echo $this->session->flashdata('error'); ?></div>
+            <?php } else if($this->session->flashdata('success')) { ?>
+                <div class='alert alert-success text-center'><?php echo $this->session->flashdata('success'); ?></div>
+            <?php } ?>
+        
+			<form role="form" method="post" action="<?php echo base_url().'Home/Kontak/sendMessage'?>">
 				<div class="row">
-				  <div class="form-group col-md-6 col-sm-12">
+				  	<div class="form-group col-md-6 col-sm-12">
 						<label>Name</label>
-						<input type="text" class="form-control">
+						<input type="text" name="nama" class="form-control">
 					</div>
 					<div class="form-group col-md-6 col-sm-12">
 						<label>Email</label>
-						<input type="text" class="form-control">
+						<input type="text" name="email" class="form-control">
 					</div>
 					<div class="form-group col-md-12">
 						<label>Pesan</label>
-						<textarea type="text" class="form-control" rows="7"></textarea>
+						<textarea type="text" name="pesan" class="form-control" rows="7"></textarea>
 					</div>
 					<div class="form-group col-md-12">
-						<input type="hidden" name="save" value="submit">
-						<button type="submit" class="btn btn-default">Kirim</button>
+						<input type="submit" class="btn btn-default" value="Kirim">
 					</div>
 				</div>
 			</form>

@@ -3,16 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Galeri extends CI_Controller {
 
-	function __construct(){
+    function __construct(){
         parent::__construct();
         $this->load->helper("url");
         $this->load->model('M_model');
         $this->load->library("pagination");
     }
 
-	function index(){
+    function index(){
 
-		$config = array();
+        $config = array();
         $config["base_url"] = base_url().'Home/Galeri/index/';
         $config["total_rows"] = $this->M_model->record_count('gallery');
         $config["per_page"] = 6;
@@ -41,10 +41,10 @@ class Galeri extends CI_Controller {
         $this->pagination->initialize($config);
 
         $page = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
-        $data["gallery"] = $this->M_model->fetch_gallery($limit, $page);
+        $data["gallery"] = $this->M_model->fetch_table($limit, $page, 'gallery');
         $data["links"] = $this->pagination->create_links();
 
         $this->load->view('home/galeri', $data);
-	}
+    }
 }
 ?>
