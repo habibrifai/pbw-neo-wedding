@@ -12,7 +12,7 @@
 	<body>
 
 		<section>
-			<nav class = "navbar navbar-transparent navbar-inverse navbar-fixed-top animated fadeIn">
+			<nav class = "navbar navbar-transparent navbar-inverse navbar-fixed-top animated fadeIn fadeInDown">
 					<div class="navbar-header">
 						<img class="navbar-brand" src="<?php echo base_url("img/NSM-Square.png"); ?>">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -44,10 +44,9 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-md-8 col-md-offset-2">
-											<h1 class="brand-heading">NEO WEDDING ORGANIZER</h1>
-											<p class="intro-text">A free, responsive, one page Bootstrap theme.
-													<br>Created by Start Bootstrap.</p>
-											<a href="#about" class="btn btn-circle page-scroll">
+											<h1 class="brand-heading animated fadeInDown">NEO WEDDING ORGANIZER</h1>
+											<p class="intro-text animated fadeInUp">We have ideas to be combinated with our client's idea to make a beyond imagination wedding</p>
+											<a href="#about" class="btn btn-circle page-scroll animated fadeInDown">
 													<i class="fa fa-angle-double-down animated"></i>
 											</a>
 									</div>
@@ -71,24 +70,26 @@
 
 			</div>
 		</section>
-
-		<div id="about" class="container-fluid">
-			<div class="row row1">
-			  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/trusted.png"); ?>"></div>
-			  <div class="col-sm-6" >
-					<h3 class="text-center garis">Reliable</h3>
+		<div class="container">
+			<div id="about" class="container-fluid">
+				<div class="row row1">
+				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated" src="<?php echo base_url("img/trusted.png"); ?>"></div>
+				  <div class="col-sm-6 col" >
+						<p class="text-center"><span class="text-center garis">Trusted & Reliable<br></span>Percayakanlah pesta pernikahan anda kepada kami, karena kami terpercaya dan dapat diandalkan</p>
+					</div>
 				</div>
-				<p class="text-center">Percayakanlah pernikahan anda kepada kami</p>
+			</div>
+			<div class="container-fluid">
+				<div class="row row2">
+					<div class="col-sm-6 col" >
+						<p class="text-center"><span class="text-center garis">Precise & Responsive<br></span>Kami mengerjakan semua hal dengan tepat dan mudah untuk beradaptasi</p>
+					</div>
+				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/trusted.png"); ?>"></div>
+				</div>
 			</div>
 		</div>
-		<div id="about" class="container-fluid">
-			<div class="row row1">
-			  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/trusted.png"); ?>"></div>
-			  <div class="col-sm-6" >
-					<h3 class="text-center garis">Reliable</h3>
-				</div>
-				<p class="text-center">Percayakanlah pernikahan anda kepada kami</p>
-			</div>
+
+		<div class="parallax paralsec1">
 		</div>
 
 		<div class="container">
@@ -113,7 +114,7 @@
 				<div id="carousel-testimonial" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner testi" >
 						<div class="item active">
-							<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
+							<p class="lead"><i>"Dengan adanya wedding planner ini, jadi gak perlu mikir-mikir lagi buat pesta pernikahanku"</i></p>
 							<span>Nama Testi 1</span>
 						</div>
 						<div class="item">
@@ -150,7 +151,7 @@
       <div class="container text-center garis">
         <h2 class="title-center"><strong>Hubungi Kami</strong></h2>
       </div>
-			<div class="row">
+			<div class="row container-fluid">
 			  <div class="col-md-3 col-sm-6">
 					<div class="card facebook">
 						<a href="https://www.facebook.com/neo.event.wedding.organizer">
@@ -222,11 +223,7 @@
 						<div class="col_two_third">
 
 							<div class="widget clearfix">
-
-								<img src="http://wemary.com/web1/images/footer-widget-logo.png" alt="" class="alignleft" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
-
-								<p>Kami percaya, pernikahan merupakan momen spesial yang patut untuk diabadikan. Ciptakan website pernikahan terintegrasi, dengan <strong>Wemary</strong>.</p>
-
+								<p>ALL YOU NEED IS LOVE<br> AND<br> A WEDDING PLANNER</p>
 								<div class="line" style="margin: 30px 0;"></div>
 							</div>
 						</div>
@@ -240,7 +237,7 @@
 
                   <div class="col_half">
                       <div class="copyrights-menu copyright-links clearfix ">
-                          <a href="#!">Beranda</a>/<a href="#">Galeri</a>/<a href="http://wemary.com/faq">Kontak</a>/<a href="http://blog.wemary.com" target="_blank">Artikel</a>
+                          <a href="#">Beranda</a>/<a href=""<?php echo base_url().'Home/Galeri'?>"">Galeri</a>/<a href="<?php echo base_url().'Home/Artikel'?>">Artikel</a>/<a class="link-kontak" href="#kontak-neo">Kontak</a>
                       </div>
                       Copyrights &copy; 2017 All Rights Reserved by WatdelulArmy
                   </div>
