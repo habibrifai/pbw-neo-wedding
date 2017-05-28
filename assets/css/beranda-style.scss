@@ -42,6 +42,7 @@ h2:before, h2:after {
   background-size: 1px 1px;
 }
 .row {
+  vertical-align: middle;
   span{
     font-weight: 800;
   }
@@ -55,6 +56,118 @@ h2:before, h2:after {
 
 .cell{
   //vertical-align: middle;
+}
+//------------------------------------------------------------------------------
+
+// LAYANAN ---------------------------------------------------------------------
+.layanan{
+  h3{
+    font-weight: 800;
+    color: #fff;
+  }
+  img{
+    margin-top: 0px;
+    vertical-align: top;
+  }
+  background: #2e2635;
+  .block{
+    position: relative;
+    height: 400px;
+    background: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    .caption{
+      position: absolute;
+      bottom:0px;
+      padding: 0 5%;
+      width: 90%;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+
+// LIHAT-GALERI ---------------------------------------------------------------------
+.lihat-galeri{
+  p{
+    font-weight: 800;
+    margin: 0px !important;
+  }
+  span{
+      margin-top: 20px;
+  }
+  .tombol {
+    color: $warnaUngu;
+    cursor: pointer;
+    display: block;
+    font-size:16px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0 auto 2em;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 100%;
+  }
+  /*.btn-galeri {
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(172, 89, 249, 0);
+    outline: 1.5px solid;
+    outline-color: rgba(172, 89, 249, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .btn-galeri:hover {
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(172, 89, 249, .5), 0 0 20px rgba(172, 89, 249, .2);
+    outline-color: rgba(172, 89, 249, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px $warnaUngu;
+  }*/
+
+  .btn-galeri {
+      letter-spacing: 0;
+  }
+
+  .btn-galeri:hover,
+  .btn-galeri:active {
+    letter-spacing: 5px;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+  }
+
+  .btn-galeri:after,
+  .btn-galeri:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+
+  .btn-galeri:hover:after,
+  .btn-galeri:hover:before {
+    backface-visibility: hidden;
+    border-color: $warnaUngu;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+  }
+
+  .btn-galeri:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+  }
 }
 //------------------------------------------------------------------------------
 
@@ -615,6 +728,7 @@ height: 500px;
   }
 }
 .blog-main{
+  margin-top: 50px;
   padding-bottom: 10px;
 }
 .bordered:after{

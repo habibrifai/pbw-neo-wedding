@@ -89,22 +89,40 @@
 			</div>
 		</div>
 
-		<div class="parallax paralsec1">
+
+
+		<div class="row text-center layanan">
+			<h3>Layanan Kami</h3>
+			<div class="col-md-4 col-sm-6 block">
+				<img class="img-responsive" src="<?php echo base_url("img/services/wedding-planner.png"); ?>">
+				<div>
+					<p class="caption text-center"><br>Wedding Planner</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 block">
+				<img class="img-responsive" src="<?php echo base_url("img/services/decoration.png"); ?>">
+			</div>
+			<div class="col-md-4 col-sm-6 block">
+				<img class="img-responsive" src="<?php echo base_url("img/services/equipment.png"); ?>">
+			</div>
+			<div class="col-md-4 col-sm-6 block">
+				<img class="img-responsive" src="<?php echo base_url("img/services/sound-system.png"); ?>">
+			</div>
+			<div class="col-md-4 col-sm-6 block">
+				<img class="img-responsive" src="<?php echo base_url("img/services/mc.png"); ?>">
+			</div>
+			<div class="col-md-4 col-sm-6 block">
+				<img class="img-responsive" src="<?php echo base_url("img/services/video-photo.png"); ?>">
+			</div>
 		</div>
 
-		<div class="container">
-		  <div class="wrapper">
-		    <h1 >Shrinking Nav</h1>
-		    <p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-
-		    <p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-
-		    <p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-
-		    <p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-				<p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
-
-				<p>Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinegar skateboard chartreuse normcore tilde vice VHS. Keffiyeh pinterest everyday carry, selfies YOLO sartorial locavore slow-carb chambray pug echo park green juice kickstarter church-key. Deep v ethical occupy, artisan quinoa banjo banh mi gluten-free food truck hammock. Forage taxidermy pork belly, intelligentsia thundercats ennui chambray cardigan tattooed everyday carry narwhal direct trade. Seitan polaroid waistcoat tofu, post-ironic four dollar toast irony marfa you probably haven't heard of them typewriter stumptown photo booth humblebrag. Distillery fanny pack wolf, tilde keytar dreamcatcher stumptown seitan truffaut.</p>
+		<div class="row lihat-galeri">
+			<div class="col-sm-6 ">
+				<img class="img-responsive" src="<?php echo base_url("img/lihat-galeri.jpg"); ?>">
+			</div>
+			<div class="col-sm-6 col">
+				<p class="text-center">Kunjungi Galeri Kami<br><br>
+				<a href="#" class="tombol btn-galeri"><span>GALERI</span></a></p>
 			</div>
 		</div>
 
