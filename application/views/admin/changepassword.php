@@ -40,7 +40,7 @@
                 <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Organizer</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
-            <a class="navbar-brand" href=""><?php echo $ses; ?></a>
+            <a class="navbar-brand" href=""><?php echo $this->session->userdata('session')['user']; ?></a>
             <li><a href="<?php echo base_url().'Admin/Login/logout' ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
             </ul>
             <!-- /.navbar-top-links -->

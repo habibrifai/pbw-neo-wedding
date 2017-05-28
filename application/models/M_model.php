@@ -7,25 +7,7 @@
     function get_item($nomor,$table){
       $this->db->where('no', $nomor);
       return $this->db->get($table);
-            // $this->db->select('*');
-            // $this->db->where($nomor);
-            // $i =  $this->db->get('gallery')->result_array();
-
-            // return $i;
     }
-
-        // function get_item_article($nomor){
-        //     if($nomor){
-
-        //         $this->db->where('no', $nomor);
-        //         return $this->db->get('article')->row_array();
-
-        //         // $sql = "SELECT * FROM article WHERE no = ?";
-        //         // $query = $this->db->query($sql, array($nomor));
-        //         // return $query->row_array();
-        //     }
-        //     return $this->db->get('article')->result_array();
-        // }
 
     function delete($nomor, $table){
       $this->db->where('no', $nomor);

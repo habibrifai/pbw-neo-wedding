@@ -157,32 +157,6 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-                <!--<div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <strong>Edit Data Artikel</strong>
-                        </div>
-                        <div class="panel-body">
-                            <form role="form" method="post" action="<?php echo base_url().'Admin/Article/editArticle'?>">
-                            <?php
-                                if(isset($edit)){ ?>
-                            <?php foreach($edit as $e){ ?>
-                                <fieldset>
-                                    <input class="form-control" value="<?php echo $e->no ?>" name="noo" type="text" required>
-                                    <br>
-                                    <input class="form-control" value="<?php echo $e->judul ?>" name="judull" type="text" required autofocus>
-                                    <br>
-                                    <textarea class="form-control" name="isi" rows="3"><?php echo $e->isi ?></textarea>
-                                    <br>
-                                    <input type="submit" class="btn btn-primary btn-block" value="Update"/>
-                                    <?php echo form_close(); ?><br>
-                                </fieldset>
-                            <?php } ?>
-                            <?php } ?>
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
         <!-- /#page-wrapper -->

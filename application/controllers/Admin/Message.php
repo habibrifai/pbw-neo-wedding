@@ -14,8 +14,6 @@ class Message extends CI_Controller{
     }
 
     function index(){
-        $session = $this->session->userdata('session');
-        $data['ses'] = $session['user'];
         $data['message'] = $this->M_model->get_data('message')->result();
         $this->load->view('admin/message', $data);    
     }

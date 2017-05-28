@@ -9,10 +9,9 @@ class Artikel extends CI_Controller {
 	    $this->load->library("pagination");
 	}
 		
-	function index()
-	{
+	function index(){
 
-		$config = array();
+        $config = array();
         $config["base_url"] = base_url().'Home/Artikel/index/';
         $config["total_rows"] = $this->M_model->record_count('article');
         $config["per_page"] = 2;

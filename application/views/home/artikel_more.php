@@ -26,7 +26,7 @@
 							<li><a href="<?php echo base_url()?>" >BERANDA</a></li>
 							<li><a href="<?php echo base_url().'Home/Galeri'?>">GALERI</a></li>
 							<li><a href="<?php echo base_url().'Home/Artikel'?>" class ="active">ARTIKEL</a></li>
-							<li><a href="<?php echo base_url().'Home/Kontak'?>">KONTAK</a></li>
+							<li><a class="redirect-scroll" href="<?php echo site_url().'#kontak-neo'?>">KONTAK</a></li>
 						</ul>
 					</div>
 			</nav>
@@ -47,47 +47,7 @@
 			 </div>
 		 </div>
 		</div>
-		<section class="text-center">
-			<footer id="footer" class="dark">
-				<div class="container ">
-
-					<!-- Footer Widgets
-					============================================= -->
-					<div class="footer-widgets-wrap clearfix">
-
-						<div class="col_two_third">
-
-							<div class="widget clearfix">
-
-								<img src="http://wemary.com/web1/images/footer-widget-logo.png" alt="" class="alignleft" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
-
-								<p>Kami percaya, pernikahan merupakan momen spesial yang patut untuk diabadikan. Ciptakan website pernikahan terintegrasi, dengan <strong>Wemary</strong>.</p>
-
-								<div class="line" style="margin: 30px 0;"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<footer id="footer" class="dark">
-
-        	<!-- Copyrights
-            ============================================= -->
-            <div id="copyrights">
-
-                <div class="container clearfix">
-
-                    <div class="col_half">
-                        <div class="copyrights-menu copyright-links clearfix ">
-                            <a href="#!">Beranda</a>/<a href="#">Galeri</a>/<a href="http://wemary.com/faq">Kontak</a>/<a href="http://blog.wemary.com" target="_blank">Artikel</a>
-                        </div>
-                        Copyrights &copy; 2017 All Rights Reserved by WatdelulArmy
-                    </div>
-                </div>
-
-            </div><!-- #copyrights end -->
-        </footer>
-		</section>
+		<?php require 'footer.php'; ?>
 		<a id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.2.1.min.js'); ?>"></script>

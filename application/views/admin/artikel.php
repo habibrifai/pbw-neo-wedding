@@ -127,69 +127,9 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Article</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <strong>Database Artikel NEO Wedding</strong>
-                        </div>
-                        <div class="panel-body">
-                        <div>
-                        </div>
-                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Judul</th>
-                                        <th>Isi</th>
-                                        <th>Tanggal Update</th>
-                                        <th>Option</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <?php $i = 1; foreach($article as $a){ ?>
-                                    <tr>
-                              
-                                        <td><?php echo $i++; ?></td>
-                                        <td><?php echo $a->judul ?></td>
-                                        <td><?php echo $a->isi ?></td>
-                                        <td><?php echo $a->tgl_update ?></td>
-                                        <td>
-
-                                            <div class="dropdown">
-                                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Action
-                                                <span class="caret"></span>
-                                              </button>
-                                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                <li>
-                                                    <a type="button" href="<?php echo base_url().'Admin/Article/doDelete/'. $a->no ?>">Hapus</a>
-                                                </li>
-                                                <li>
-
-                                                    <a type="button" onclick="editArticlee('<?php echo $a->no ?>')" data-toggle="modal" data-target="#editArticle">Edit</a>
-
-                                                </li>
-                                              </ul>
-                                            </div>
-
-                                        </td>
-                                    </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>                         
-                        </div>
-                    </div> -->
         </div>
     </div>
         <!-- /#page-wrapper -->
-        <!-- <button type="button" id="add" class="btn btn-primary btn-circle btn-xl" data-toggle="modal" data-target="#addArticle"><i class="fa fa-plus"></i></button> -->
 
     <div class="modal fade" tabindex="-1" role="dialog" id="addArticle">
       <div class="modal-dialog" role="document">

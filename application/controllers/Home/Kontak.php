@@ -12,7 +12,7 @@ class Kontak extends CI_Controller {
     }
 
 	function index(){
-		//nothing
+		redirect(base_url().'#kontak-neo');
 	}
 
 	function sendMessage(){

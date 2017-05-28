@@ -5,6 +5,7 @@ class Dashboard extends CI_Controller{
 
 	public function __construct(){
         parent::__construct();
+        $this->load->model('M_model');
         $this->load->helper(array('form', 'url'));
         date_default_timezone_set('Asia/Jakarta');
         $session = $this->session->userdata('session');
@@ -14,8 +15,10 @@ class Dashboard extends CI_Controller{
     }
 
     function index(){
-        $session = $this->session->userdata('session');
-        $data['ses'] = $session['user'];
+        $data['dataGaleri'] = $this->M_model->record_count('gallery');
+        $data['dataArtikel'] = $this->M_model->record_count('article');
+        $data['dataPesan'] = $this->M_model->record_count('message');
+
         $this->load->view('admin/dashboard', $data); 
     }
 }

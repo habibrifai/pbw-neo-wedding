@@ -15,9 +15,7 @@ class Changepassword extends CI_Controller{
     }
     
     function index(){
-        $session = $this->session->userdata('session');
-        $data['ses'] = $session['user'];
-        $this->load->view('admin/changepassword', $data);    
+        $this->load->view('admin/changepassword');    
 
     }
 
@@ -40,36 +38,10 @@ class Changepassword extends CI_Controller{
             $data['success'] = "Password anda sudah terganti, silakan login kembali";
             $this->load->view('admin/login', $data);
             $this->session->sess_destroy();
-            //redirect(base_url().'admin/logout', $data);
         } else {
             $data['error'] = "Password tidak sesuai, ulangi lagi";
-            $data['ses'] = $session['user'];
             $this->load->view('admin/changepassword', $data);
         }
-
-
-        // if($new_pass == $confirm_pass){
-        //      $session = $this->session->userdata('session');
-        //      $user = $session['user'];
-        //      $isCorrect = $this->m_change->get_data($user,$old_pass);
-
-        //     if($isCorrect == true){
-        //         $setPass = array('password' => $new_pass);
-        //         $this->m_change->update_pass($user,$setPass);
-        //         redirect(base_url().'admin/logout');
-        //     } else {
-        //         $data['error'] = "Password tidak sesuai, ulangi lagi";
-        //         $data['ses'] = $session['user'];
-        //         $this->load->view('admin/changepassword', $data);
-        //         //$this->changepassword();
-        //     }
-        // } else {
-        //     $data['error'] = "Password tidak sesuai, ulangi lagi";
-        //     $data['ses'] = $session['user'];
-        //     $this->load->view('admin/changepassword', $data);
-        //     // echo "Password tidak sesuai, ulangi lagi.";
-        //     //$this->changepassword();
-        // }
     }
 }
 ?>
