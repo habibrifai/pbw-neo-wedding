@@ -31,13 +31,13 @@
 					</div>
 			</nav>
 
-			<div id = "newCarousel" class="carousel fade-carousel carousel-fade slide" data-interval="4000" data-ride="carousel">
+			<div id = "newCarousel" class="carousel fade-carousel carousel-fade slide" data-interval="6000" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#newCarousel" data-slide-to ="0" class="active"></li>
 					<li data-target="#newCarousel" data-slide-to ="1" ></li>
 					<li data-target="#newCarousel" data-slide-to ="2" ></li>
 				</ol>
-				<div class="carousel-inner slider" >
+				<div class="carousel-inner slider carousel-zoom" >
 
 					<header class="intro">
 						<div class="intro-body">
@@ -144,12 +144,12 @@
 		</div>
 
 		<div class="row lihat-galeri">
-			<div class="col-sm-6 col-lihat-galeri ">
-				<img class="img-responsive" src="<?php echo base_url("img/lihat-galeri.jpg"); ?>">
+			<div class="col col-sm-6 col-lihat-galeri ">
+
 			</div>
-			<div class="col-sm-6 col">
-				<p class="text-center">Kunjungi Galeri Kami<br><br>
-				<a href="#" class="tombol btn-galeri"><span>GALERI</span></a></p>
+			<div class="col col-sm-6 col-kunjungi-galeri">
+				<p class="text-center">Kunjungi Galeri Kami<br><br><br><br><br><br></p>
+				<p><a href="#" class="tombol btn-galeri"><span>GALERI   </span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
 			</div>
 		</div>
 
