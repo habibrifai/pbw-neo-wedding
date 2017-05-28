@@ -94,11 +94,14 @@ h2:before, h2:after {
 .col-kunjungi-galeri{
   padding-top: 50px;
 }
+.col-kunjungi-galeri,.col-foto-galeri{
+  height: 400px;
+}
 *,*:before,*:after{
   box-sizing: border-box;
 }
 .lihat-galeri{
-  //height: 300px;
+  height: 400px;
   p{
     font-weight: 800;
     margin: 0px !important;

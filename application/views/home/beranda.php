@@ -144,12 +144,12 @@
 		</div>
 
 		<div class="row lihat-galeri">
-			<div class="col col-sm-6 col-lihat-galeri ">
+			<div class="col-sm-6 col-foto-galeri ">
 
 			</div>
-			<div class="col col-sm-6 col-kunjungi-galeri">
+			<div class="col-sm-6 col-kunjungi-galeri">
 				<p class="text-center">Kunjungi Galeri Kami<br><br><br><br><br><br></p>
-				<p><a href="#" class="tombol btn-galeri"><span>GALERI   </span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+				<p><a href="<?php echo base_url().'Home/Galeri'?>" class="tombol btn-galeri"><span>GALERI   </span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
 			</div>
 		</div>
 
@@ -282,7 +282,7 @@
 
                   <div class="col_half">
                       <div class="copyrights-menu copyright-links clearfix ">
-                          <a href="#">Beranda</a>/<a href=""<?php echo base_url().'Home/Galeri'?>"">Galeri</a>/<a href="<?php echo base_url().'Home/Artikel'?>">Artikel</a>/<a class="link-kontak" href="#kontak-neo">Kontak</a>
+                          <a href="#">Beranda</a>/<a href="<?php echo base_url().'Home/Galeri'?>">Galeri</a>/<a href="<?php echo base_url().'Home/Artikel'?>">Artikel</a>/<a class="link-kontak" href="#kontak-neo">Kontak</a>
                       </div>
                       Copyrights &copy; 2017 All Rights Reserved by WatdelulArmy
                   </div>
