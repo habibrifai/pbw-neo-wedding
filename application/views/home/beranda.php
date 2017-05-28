@@ -84,7 +84,7 @@
 					<div class="col-sm-6 col" >
 						<p class="text-center"><span class="text-center garis">Precise & Responsive<br></span>Kami mengerjakan semua hal dengan tepat dan mudah untuk beradaptasi</p>
 					</div>
-				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/trusted.png"); ?>"></div>
+				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/precise.png"); ?>"></div>
 				</div>
 			</div>
 		</div>
