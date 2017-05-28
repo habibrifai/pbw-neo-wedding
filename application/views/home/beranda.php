@@ -31,7 +31,7 @@
 					</div>
 			</nav>
 
-			<div id = "newCarousel" class="carousel slide" >
+			<div id = "newCarousel" class="carousel fade-carousel carousel-fade slide" data-interval="4000" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#newCarousel" data-slide-to ="0" class="active"></li>
 					<li data-target="#newCarousel" data-slide-to ="1" ></li>
@@ -93,31 +93,58 @@
 
 		<div class="row text-center layanan">
 			<h3>Layanan Kami</h3>
-			<div class="col-md-4 col-sm-6 block">
-				<img class="img-responsive" src="<?php echo base_url("img/services/wedding-planner.png"); ?>">
-				<div>
-					<p class="caption text-center"><br>Wedding Planner</p>
+			<div class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<img class="img-responsive" src="<?php echo base_url("img/services/wedding-planner.png"); ?>">
+					<div class="caption">
+						<p class="text-center">Wedding Planner</p>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-6 block">
-				<img class="img-responsive" src="<?php echo base_url("img/services/decoration.png"); ?>">
+			<div class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<img class="img-responsive" src="<?php echo base_url("img/services/decoration.png"); ?>">
+					<div class="caption">
+						<p class="text-center">Decoration</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-4 col-sm-6 block">
-				<img class="img-responsive" src="<?php echo base_url("img/services/equipment.png"); ?>">
+			<div class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<img class="img-responsive" src="<?php echo base_url("img/services/equipment.png"); ?>">
+					<div class="caption">
+						<p class="text-center">Wedding Equipment</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-4 col-sm-6 block">
-				<img class="img-responsive" src="<?php echo base_url("img/services/sound-system.png"); ?>">
+			<div class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<img class="img-responsive" src="<?php echo base_url("img/services/sound-system.png"); ?>">
+					<div class="caption">
+						<p class="text-center">Sound System</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-4 col-sm-6 block">
-				<img class="img-responsive" src="<?php echo base_url("img/services/mc.png"); ?>">
+			<div class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<img class="img-responsive" src="<?php echo base_url("img/services/mc.png"); ?>">
+					<div class="caption">
+						<p class="text-center">MC</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-4 col-sm-6 block">
-				<img class="img-responsive" src="<?php echo base_url("img/services/video-photo.png"); ?>">
+			<div class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<img class="img-responsive" src="<?php echo base_url("img/services/video-photo.png"); ?>">
+					<div class="caption">
+						<p class="text-center">Video & Photo</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="row lihat-galeri">
-			<div class="col-sm-6 ">
+			<div class="col-sm-6 col-lihat-galeri ">
 				<img class="img-responsive" src="<?php echo base_url("img/lihat-galeri.jpg"); ?>">
 			</div>
 			<div class="col-sm-6 col">

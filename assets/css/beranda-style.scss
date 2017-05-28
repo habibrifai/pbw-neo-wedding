@@ -62,25 +62,27 @@ h2:before, h2:after {
 // LAYANAN ---------------------------------------------------------------------
 .layanan{
   h3{
-    font-weight: 800;
-    color: #fff;
-  }
-  img{
-    margin-top: 0px;
-    vertical-align: top;
-  }
+     font-weight: 800;
+     color: #fff;
+   }
+
   background: #2e2635;
-  .block{
+  .thumbnail {
     position: relative;
-    height: 400px;
-    background: #fff;
-    padding-left: 30px;
-    padding-right: 30px;
-    .caption{
-      position: absolute;
-      bottom:0px;
-      padding: 0 5%;
-      width: 90%;
+    padding: 0px;
+  }
+
+  .thumbnail img {
+    width: 100%;
+  }
+  .caption{
+    border-top:1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    padding-bottom: 0px !important;
+    p{
+      font-weight: 400;
     }
   }
 }
@@ -89,6 +91,7 @@ h2:before, h2:after {
 
 // LIHAT-GALERI ---------------------------------------------------------------------
 .lihat-galeri{
+  //height: 300px;
   p{
     font-weight: 800;
     margin: 0px !important;
@@ -96,7 +99,7 @@ h2:before, h2:after {
   span{
       margin-top: 20px;
   }
-  .tombol {
+  /*.tombol {
     color: $warnaUngu;
     cursor: pointer;
     display: block;
@@ -110,7 +113,7 @@ h2:before, h2:after {
     vertical-align: middle;
     width: 100%;
   }
-  /*.btn-galeri {
+  .btn-galeri {
     border: 0 solid;
     box-shadow: inset 0 0 20px rgba(172, 89, 249, 0);
     outline: 1.5px solid;
@@ -128,7 +131,7 @@ h2:before, h2:after {
     outline-color: rgba(172, 89, 249, 0);
     outline-offset: 15px;
     text-shadow: 1px 1px 2px $warnaUngu;
-  }*/
+  }
 
   .btn-galeri {
       letter-spacing: 0;
@@ -167,7 +170,7 @@ h2:before, h2:after {
     bottom: auto;
     top: 0;
     width: 70%;
-  }
+  }*/
 }
 //------------------------------------------------------------------------------
 
