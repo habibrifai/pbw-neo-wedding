@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+	<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
 	<head>
 	<title>Neo Wedding Organizer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
