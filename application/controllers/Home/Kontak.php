@@ -7,12 +7,13 @@ class Kontak extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'email', 'url'));
         $this->load->model('M_model');
+        $this->load->library('email');
         $this->load->library('form_validation');
         date_default_timezone_set('Asia/Jakarta');
     }
 
 	function index(){
-		//nothing
+		redirect(base_url().'#kontak-neo');
 	}
 
 	function sendMessage(){
@@ -25,6 +26,28 @@ class Kontak extends CI_Controller {
 			$this->session->set_flashdata('error', 'Maaf, pesan anda tidak terkirim. Mohon periksa kembali email anda.');
             
         } else {
+
+            //Config emaill
+            $config['protocol'] = "smtp";
+            $config['smtp_host'] = "ssl://smtp.gmail.com";
+            $config['smtp_port'] = "465";
+            //$config['smtp_timeout'] = ‘7’;
+            $config['smtp_user'] = "sapijantan1@gmail.com"; 
+            $config['smtp_pass'] = "lolipop777";
+            $config['charset'] = "utf-8";
+            $config['mailtype'] = "html";
+            $config['newline'] = "\r\n";
+            $config['validation'] = TRUE;
+            $this->email->initialize($config);
+
+            //Kirim Email
+            $this->email->to($this->input->post('email'));
+            $this->email->from('neowedding@gmail.com','Neo Wedding Organizer');
+            $this->email->subject('Thanks Giving');
+            $this->email->message('Terimakasih telah menggunakan jasa kami, salam hormat Neo Wedding Organozer');
+            $this->email->send();
+
+
 
         	$data = array(
         		'nama' => $this->input->post('nama'),

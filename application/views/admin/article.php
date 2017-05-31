@@ -44,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Organizer</a>
+                <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Wedding Organizer</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
             <a class="navbar-brand" href=""><?php echo $this->session->userdata('session')['user']; ?></a>
@@ -157,32 +157,6 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-                <!--<div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <strong>Edit Data Artikel</strong>
-                        </div>
-                        <div class="panel-body">
-                            <form role="form" method="post" action="<?php echo base_url().'Admin/Article/editArticle'?>">
-                            <?php
-                                if(isset($edit)){ ?>
-                            <?php foreach($edit as $e){ ?>
-                                <fieldset>
-                                    <input class="form-control" value="<?php echo $e->no ?>" name="noo" type="text" required>
-                                    <br>
-                                    <input class="form-control" value="<?php echo $e->judul ?>" name="judull" type="text" required autofocus>
-                                    <br>
-                                    <textarea class="form-control" name="isi" rows="3"><?php echo $e->isi ?></textarea>
-                                    <br>
-                                    <input type="submit" class="btn btn-primary btn-block" value="Update"/>
-                                    <?php echo form_close(); ?><br>
-                                </fieldset>
-                            <?php } ?>
-                            <?php } ?>
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
         <!-- /#page-wrapper -->

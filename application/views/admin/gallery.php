@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Organizer</a>
+                <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Wedding Organizer</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
             <a class="navbar-brand" href=""><?php echo $this->session->userdata('session')['user']; ?></a>
@@ -123,18 +123,6 @@
                                         <td><?php echo $b->judul ?></td>
                                         <td><?php echo $b->keterangan ?></td>
                                         <td>
-
-                                            <!-- <div class="img-wrapper">
-                                                <a href="<?php echo base_url().'img/gambar/'. $b->gambar ?>" data-lightbox="gallery">
-                                                <img class="img-responsive" src="<?php echo base_url().'img/gambar/'. $b->gambar ?>">
-                                                    <div class="overlay">
-                                                        <div>
-                                                            <span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div> -->
 
                                             <a href="<?php echo base_url().'img/gambar/'. $b->gambar ?>" data-lightbox="gallery">
                                             <img style="height: 200px;width: 300px" src="<?php echo base_url().'img/gambar/'. $b->gambar ?>">

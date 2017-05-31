@@ -15,8 +15,6 @@ class Gallery extends CI_Controller{
     }
 
     function index(){
-        // $session = $this->session->userdata('session');
-        // $data['ses'] = $session['user'];
         $data['gallery'] = $this->M_model->get_data('gallery')->result();
         $this->load->view('admin/gallery', $data);  
     }
@@ -30,16 +28,11 @@ class Gallery extends CI_Controller{
         $config['encrypt_name']         = TRUE;
 
         $this->load->library('upload', $config);
-        // $session = $this->session->userdata('session');
-        // $data['ses'] = $session['user'];
-        // $time = array('last_login' => date('Y-m-d H:i:s'));
 
         if ( ! $this->upload->do_upload('img')){
-            // $data['ses'] = $session['user'];
             $data['error'] = $this->upload->display_errors();
             $data['gallery'] = $this->M_model->get_data('gallery')->result();
             $this->load->view('admin/gallery', $data);
-            // redirect(base_url().'admin/gallery');
         } else {
             $fileUpload = $this->upload->data();
 
@@ -51,7 +44,6 @@ class Gallery extends CI_Controller{
             );
             $this->M_model->inputData($datab, 'gallery');
             redirect(base_url().'Admin/Gallery');
-            // echo $this->db->last_query();
         }
     }
 
@@ -59,17 +51,6 @@ class Gallery extends CI_Controller{
         $this->M_model->delete($nomor, 'gallery');
         redirect(base_url().'Admin/Gallery');
     }
-
-    // function edit($nomor){
-    //     $session = $this->session->userdata('session');
-    //     $data = array('no' => $nomor);
-
-    //     $data['edit'] = $this->M_model->get_item($nomor,'gallery')->result();
-    //     $data['ses'] = $session['user'];
-    //     $data['gallery'] = $this->M_model->get_data('gallery')->result();
-    //     $this->load->view('Admin/Gallery', $data);
-    //     // var_dump($data['edit']);
-    // }
 
     function getSelectedGallery($nomor){
         $data = $this->M_model->get_item($nomor, 'gallery')->row_array();
@@ -85,15 +66,12 @@ class Gallery extends CI_Controller{
         $config['encrypt_name']         = TRUE;
 
         $this->load->library('upload', $config);
-        // $session = $this->session->userdata('session');
 
         if(isset($_FILES['img']) && $_FILES['img']['size'] > 0){
             if (! $this->upload->do_upload('img')){
-                // $data['ses'] = $session['user'];
                 $data['error1'] = $this->upload->display_errors();
                 $data['gallery'] = $this->M_model->get_data('gallery')->result();
                 $this->load->view('admin/gallery', $data);
-                // redirect(base_url().'admin/gallery');
             } else {
                 $fileUpload = $this->upload->data();
                 $nomor = $this->input->post('noo');
@@ -105,7 +83,6 @@ class Gallery extends CI_Controller{
                 );
                 $this->M_model->update($nomor,$datab, 'gallery');
                 redirect(base_url().'Admin/Gallery');
-                // echo $this->db->last_query();
             }
         } else {
             $nomor = $this->input->post('noo');
@@ -116,7 +93,6 @@ class Gallery extends CI_Controller{
                 );
             $this->M_model->update($nomor,$databb, 'gallery');
             redirect(base_url().'Admin/Gallery');
-            // echo $this->db->last_query();
         }
     }
 }

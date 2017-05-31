@@ -11,7 +11,12 @@ class Login extends CI_Controller{
     }
 
     function index(){
-        $this->load->view('admin/login');
+        $session = $this->session->userdata('session');
+        if(!empty($session)){
+            $this->load->view('admin/dashboard');
+        } else {
+            $this->load->view('admin/login');
+        }
     }
 
     function do_login(){
@@ -19,12 +24,8 @@ class Login extends CI_Controller{
 		$p = htmlspecialchars($this->input->post('pass'));
         $password = hash('md5', hash('sha256', $p));
 
-        // echo $username;
-        // echo $password;
-
 		$isLogin = $this->M_login->login_authen($username, $password); 
-        
-        // $date = date('Y-m-d H:i:s');
+
         $time = array('last_login' => date('Y-m-d H:i:s'));
         
 		if($isLogin == true){

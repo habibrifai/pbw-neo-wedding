@@ -36,10 +36,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Organizer</a>
+                <a class="navbar-brand" href="<?php echo base_url().'Admin/Dashboard'; ?>">NEO Wedding Organizer</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
-                <a class="navbar-brand" href=""><?php echo $ses; ?></a>
+                <a class="navbar-brand" href=""><?php echo $this->session->userdata('session')['user']; ?></a>
                 <li><a href="<?php echo base_url().'Admin/Login/logout' ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
             </ul>
             <div class="navbar-default sidebar" role="navigation">
@@ -60,17 +60,6 @@
                         <li>
                             <a href="<?php echo base_url().'Admin/Changepassword'; ?>"><i class="fa fa-cog fa-fw"></i> Change Password</a>
                         </li>
-                        <!-- <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="blank.html">Blank Page</a>
-                                </li>
-                                <li>
-                                    <a href="login.html">Login Page</a>
-                                </li>
-                            </ul>
-                        </li> -->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -95,7 +84,7 @@
                                     <i class="fa fa-picture-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
+                                    <div class="huge"><?php echo $dataGaleri; ?></div>
                                     <div><strong>My Gallery</strong></div>
                                 </div>
                             </div>
@@ -117,7 +106,7 @@
                                     <i class="fa fa-list fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                    <div class="huge"><?php echo $dataArtikel; ?></div>
                                     <div><strong>My Article</strong></div>
                                 </div>
                             </div>
@@ -139,7 +128,7 @@
                                     <i class="fa fa fa-comments fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge"><?php echo $dataPesan; ?></div>
                                     <div><strong>Message</strong></div>
                                 </div>
                             </div>
@@ -176,14 +165,6 @@
                     </div>
                 </div>
             </div>
-            <!-- /.row -->
-            <div class="row">
-                <!-- 1 -->
-                <!-- /.col-lg-8 -->
-                <!-- 2 -->
-                <!-- /.col-lg-4 -->
-            </div>
-            <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 

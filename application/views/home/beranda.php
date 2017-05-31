@@ -215,7 +215,7 @@
 				</div>
 			  <div class="col-md-3 col-sm-6">
 					<div class="card no-hp">
-						<a href="#">
+						<a>
 							<div class="card-front"><i class="fa fa-phone" aria-hidden="true"></i></div>
 							<div class="card-back">082132291570</div>
 						</a>
@@ -223,7 +223,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="card no-wa">
-						<a href="#">
+						<a>
 							<div class="card-front"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
 							<div class="card-back">085103013553</div>
 						</a>
@@ -270,40 +270,7 @@
 				</div>
 			</form>
     </section>
-		<section class="text-center">
-			<footer id="footer" class="dark">
-				<div class="container ">
-
-					<!-- Footer Widgets
-					============================================= -->
-					<div class="footer-widgets-wrap clearfix">
-
-						<div class="col_two_third">
-
-							<div class="widget clearfix">
-								<p>ALL YOU NEED IS LOVE<br> AND<br> A WEDDING PLANNER</p>
-								<div class="line" style="margin: 30px 0;"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<footer id="footer" class="dark">
-          <div id="copyrights">
-
-              <div class="container clearfix">
-
-                  <div class="col_half">
-                      <div class="copyrights-menu copyright-links clearfix ">
-                          <a href="#">Beranda</a>/<a href="<?php echo base_url().'Home/Galeri'?>">Galeri</a>/<a href="<?php echo base_url().'Home/Artikel'?>">Artikel</a>/<a class="link-kontak" href="#kontak-neo">Kontak</a>
-                      </div>
-                      Copyrights &copy; 2017 All Rights Reserved by WatdelulArmy
-                  </div>
-              </div>
-
-          </div>
-      </footer>
-		</section>
+    <?php require 'footer.php'; ?>
 		<a id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.2.1.min.js'); ?>"></script>
