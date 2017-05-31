@@ -75,18 +75,18 @@
 		<div class="container">
 			<div id="about" class="container-fluid">
 				<div class="row row1">
-				  <div class="col-sm-6"><img class="img-responsive center-block animated" src="<?php echo base_url("img/trusted.png"); ?>"></div>
+				  <div class="col-sm-6 "><img class="img-responsive center-block wow fadeInLeft" src="<?php echo base_url("img/trusted.png"); ?>"></div>
 				  <div class="col-sm-6 col" >
-						<p class="text-center"><span class="text-center garis">Trusted & Reliable<br></span>Percayakanlah pesta pernikahan anda kepada kami, karena kami terpercaya dan dapat diandalkan</p>
+						<p class="text-center wow fadeInRight"><span class="text-center garis ">Trusted & Reliable<br></span>Percayakanlah pesta pernikahan anda kepada kami, karena kami terpercaya dan dapat diandalkan</p>
 					</div>
 				</div>
 			</div>
 			<div class="container-fluid">
 				<div class="row row2">
 					<div class="col-sm-6 col" >
-						<p class="text-center"><span class="text-center garis">Precise & Responsive<br></span>Kami mengerjakan semua hal dengan tepat dan mudah untuk beradaptasi</p>
+						<p class="text-center wow fadeInLeft"><span class="text-center garis ">Precise & Responsive<br></span>Kami mengerjakan semua hal dengan tepat dan mudah untuk beradaptasi</p>
 					</div>
-				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated fadeInLeft" src="<?php echo base_url("img/precise.png"); ?>"></div>
+				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 wow fadeInRight" src="<?php echo base_url("img/precise.png"); ?>"></div>
 				</div>
 			</div>
 		</div>
@@ -96,7 +96,7 @@
 		<div class="row text-center layanan">
 			<h3>Layanan Kami</h3>
 			<div class="col-md-4 col-sm-6">
-				<div class="thumbnail">
+				<div class="thumbnail wow fadeInLeft">
 					<img class="img-responsive" src="<?php echo base_url("img/services/wedding-planner.png"); ?>">
 					<div class="caption">
 						<p class="text-center">Wedding Planner</p>
@@ -104,7 +104,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<div class="thumbnail">
+				<div class="thumbnail wow fadeInUp">
 					<img class="img-responsive" src="<?php echo base_url("img/services/decoration.png"); ?>">
 					<div class="caption">
 						<p class="text-center">Decoration</p>
@@ -112,7 +112,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<div class="thumbnail">
+				<div class="thumbnail wow fadeInRight">
 					<img class="img-responsive" src="<?php echo base_url("img/services/equipment.png"); ?>">
 					<div class="caption">
 						<p class="text-center">Wedding Equipment</p>
@@ -120,7 +120,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<div class="thumbnail">
+				<div class="thumbnail wow fadeInLeft">
 					<img class="img-responsive" src="<?php echo base_url("img/services/sound-system.png"); ?>">
 					<div class="caption">
 						<p class="text-center">Sound System</p>
@@ -128,7 +128,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<div class="thumbnail">
+				<div class="thumbnail wow fadeInUp">
 					<img class="img-responsive" src="<?php echo base_url("img/services/mc.png"); ?>">
 					<div class="caption">
 						<p class="text-center">MC</p>
@@ -136,7 +136,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<div class="thumbnail">
+				<div class="thumbnail wow fadeInRight">
 					<img class="img-responsive" src="<?php echo base_url("img/services/video-photo.png"); ?>">
 					<div class="caption">
 						<p class="text-center">Video & Photo</p>
@@ -146,9 +146,9 @@
 		</div>
 
 		<div class="lihat-galeri">
-			<div class="col-sm-6 col-foto-galeri ">
+			<div class="col-sm-6 col-foto-galeri wow fadeInLeft">
 			</div>
-			<div class="col-sm-6 col-kunjungi-galeri">
+			<div class="col-sm-6 col-kunjungi-galeri wow fadeInRight">
 				<p class="text-center">Kunjungi Galeri Kami<br><br><br><br><br><br></p>
 				<p><a href="<?php echo base_url().'Home/Galeri'?>" class="tombol btn-galeri"><span>GALERI   </span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
 			</div>
@@ -157,11 +157,11 @@
 		<section class="row testimonial text-center">
 			<div class="container">
 
-					<h1>Apa Kata Client Kami?</h1>
+					<h1 class="wow fadeInDown">Apa Kata Client Kami?</h1>
 					<div id="carousel-testimonial" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner testi" >
+						<div class="carousel-inner testi wow fadeInUp" >
 							<div class="item active">
-								<p class="lead"><i>"Dengan adanya wedding planner ini, jadi gak perlu mikir-mikir lagi buat pesta pernikahanku"</i></p>
+								<p class="lead "><i>"Dengan adanya wedding planner ini, jadi gak perlu mikir-mikir lagi buat pesta pernikahanku"</i></p>
 								<span>- Hesti Ayu -</span>
 							</div>
 							<div class="item">
@@ -172,7 +172,7 @@
 								<p class="lead"><i>"Pekerjanya cepet tanggap, gara-gara itu weddingku lancar jaya, terimakasih NEO"</i></p>
 								<span>- Agung Baskoro Putra -</span>
 							</div>
-							<div class="item">
+							<div class="item ">
 								<p class="lead"><i>"Gak perlu ragu lagi sama wedding planner satu ini, TOP MARKOTOP"</i></p>
 								<span>- Sandi Amanah -</span>
 							</div>
@@ -197,11 +197,11 @@
 		</section>
 	<section id="kontak-neo" class="kontak">
       <div class="text-center">
-        <h2 class="title-center"><strong>Hubungi Kami</strong></h2>
+        <h2 class="title-center wow fadeInDown"><strong>Hubungi Kami</strong></h2>
       </div>
 			<div class="row container-fluid">
 			  <div class="col-md-3 col-sm-6">
-					<div class="card facebook">
+					<div class="card facebook wow fadeInLeft">
 						<a href="https://www.facebook.com/neo.event.wedding.organizer">
 							<div class="card-front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
 							<div class="card-back">Kunjungi Facebook Kami</div>
@@ -209,7 +209,7 @@
 					</div>
 				</div>
 			  <div class="col-md-3 col-sm-6">
-					<div class="card no-hp">
+					<div class="card no-hp wow fadeInLeft">
 						<a>
 							<div class="card-front"><i class="fa fa-phone" aria-hidden="true"></i></div>
 							<div class="card-back">082132291570</div>
@@ -217,7 +217,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
-					<div class="card no-wa">
+					<div class="card no-wa wow fadeInRight">
 						<a>
 							<div class="card-front"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
 							<div class="card-back">085103013553</div>
@@ -225,7 +225,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
-					<div class="card instagram">
+					<div class="card instagram wow fadeInRight">
 						<a href="https://www.instagram.com/neo.organizer/">
 							<div class="card-front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
 							<div class="card-back">Kunjungi Instagram Kami</div>
@@ -235,7 +235,7 @@
 			</div>
 	  </section>
 
-		<section class="container pesan">
+		<section class="container pesan wow fadeInUp">
       <div class="text-center">
         <h2 class="title-center"><strong>Kirim Pesan</strong></h2>
       </div>
@@ -265,7 +265,7 @@
 				</div>
 			</form>
     </section>
-		<section class="lokasi">
+		<section class="lokasi wow fadeInDown">
 			<div class="container text-center">
         <h2 class="title-center"><strong>Lokasi Kantor</strong></h2>
       </div>
@@ -282,6 +282,7 @@
 	<script type="text/javascript" src="<?php echo base_url('assets/js/beranda-js.js'); ?>"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPJiSH4BYDIXjSAIYj5kX5bO88hbg6RV4&callback=initMap"
   type="text/javascript"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">‌​</script><script>new WOW().init();</script>
 
 
 	</body>

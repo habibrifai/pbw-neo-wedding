@@ -38,7 +38,6 @@
 
 		<section class=galeri>
 			<div class="container">
-        <h1 class="text-center uppercase"><br><strong>Galeri</strong></h1>
         <di v class="row ">
         <?php foreach($gallery as $b){ ?>
 	          <div class="col-xs-12 col-sm-6 col-md-4">
