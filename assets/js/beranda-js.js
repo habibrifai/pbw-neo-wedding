@@ -20,16 +20,30 @@ $document.scroll(function() {
       $element.removeClass(fadeInDown);
     }
 });*/
+function initMap(){
+  var location ={ lat:-7.239557, lng:112.752729};
+	var map = new google.maps.Map(document.getElementById("map"), {
+		zoom: 17,
+		center :location
+	});
+	var marker = new google.maps.Marker({
+		position:location,
+		map: map
+	});
+}
+function scrollKontak(){
+  event.preventDefault();
+  var target =$('#kontak-neo');
+  $('html, body').animate({
+    scrollTop: target.offset().top -50
+  }, 600);
+}
 
 $(function(){
 
   if($(window).width() < 768){
     jQuery.fx.off = true;
   }
-  $('.link-kontak').click(function () {
-        $('.navbar a').removeClass('active');
-        $(this).addClass('active');
-  });
 
   $(".btn-circle").on('click', function(event) {
       event.preventDefault();
@@ -39,23 +53,19 @@ $(function(){
       }, 600);
   });
 
-  $(".link-kontak").on('click', function(event) {
-    if (window.location.hash != null && window.location.hash != '') {
-      event.preventDefault();
-      var target =$('#kontak-neo');
-      $('html, body').animate({
-        scrollTop: (target.offset().top-50)
-      }, 600);
-    }
+  $(".one-page").on('click', function(event) {
+      scrollKontak();
   });
 
   $(".link-kontak").on('click', function(event) {
-      event.preventDefault();
-      var target =$('#kontak-neo');
-      $('html, body').animate({
-        scrollTop: (target.offset().top-50)
-      }, 600);
+      windows.location.replace("url");
+      //scrollKontak();
+
+
+
+
   });
+
 
   $('#return-to-top').click(function() {      // When arrow is clicked
       $('body,html').animate({
@@ -83,8 +93,17 @@ $(function(){
    else{
      $('#return-to-top').fadeOut(200);
    }
-   if($(window).scrollTop() >= 500) {
-
+   if($(window).scrollTop() >=$('#kontak-neo').position().top -50){
+     $('.navbar a').removeClass('active');
+     $('.one-page').addClass('active');
+   }
+   else{
+     $('.one-page').removeClass('active');
+     $('.beranda').addClass('active');
+   }
+   if ($(window).scrollTop() >=$('#kontak-neo').position().top +750){
+     $('.one-page').removeClass('active');
+     $('.beranda').addClass('active');
    }
   });
 });

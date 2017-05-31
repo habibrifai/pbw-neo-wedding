@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 	<section class="text-center">
 		<footer id="footer" class="dark">
-			<div class="container ">
+			<div id="quote">
 
 				<!-- Footer Widgets
 				============================================= -->
@@ -11,7 +12,7 @@
 					<div class="col_two_third">
 
 						<div class="widget clearfix">
-							<p style="font-size: 20pt;color: white;  ">We have ideas to be combinated with our client's idea to make a beyond imagination wedding</p>
+							<p >All you need is love and a Wedding Planner</p>
 							<div class="line" style="margin: 30px 0;"></div>
 						</div>
 					</div>
@@ -27,7 +28,7 @@
                       <div class="copyrights-menu copyright-links clearfix ">
                           <a href="<?php echo base_url() ?>">Beranda</a>/<a href="<?php echo base_url().'Home/Galeri'?>">Galeri</a>/<a href="<?php echo base_url().'Home/Artikel'?>">Artikel</a>/<a href="<?php echo site_url().'#kontak-neo'?>">Kontak</a>
                       </div>
-                      Copyrights &copy; 2017 All Rights Reserved by Tech Dev
+                      Copyrights &copy; 2017 All Rights Reserved by NEO Wedding Organizer
                   </div>
               </div>
 

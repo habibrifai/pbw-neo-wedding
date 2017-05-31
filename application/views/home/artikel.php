@@ -3,6 +3,8 @@
 <html lang="en">
 	<head>
 	<title>Neo Wedding Organizer</title>
+	<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="<?php echo base_url().'assets/admin_bootstrap/vendor/bootstrap/css/bootstrap.css' ?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/beranda-style.min.css' ?>" >
@@ -27,7 +29,7 @@
 							<li><a href="<?php echo base_url()?>" >BERANDA</a></li>
 							<li><a href="<?php echo base_url().'Home/Galeri'?>">GALERI</a></li>
 							<li><a href="<?php echo base_url().'Home/Artikel'?>" class ="active">ARTIKEL</a></li>
-							<li><a class="redirect-scroll" href="<?php echo site_url().'#kontak-neo'?>">KONTAK</a></li>
+							<li><a class="link-kontak" href="<?php echo site_url().'#kontak-neo'?>">KONTAK</a></li>
 						</ul>
 					</div>
 			</nav>

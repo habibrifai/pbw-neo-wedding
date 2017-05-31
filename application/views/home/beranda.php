@@ -3,6 +3,7 @@
 	<head>
 	<title>Neo Wedding Organizer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
 	<link href="<?php echo base_url().'assets/admin_bootstrap/vendor/bootstrap/css/bootstrap.css' ?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/beranda-style.min.css' ?>" >
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/animate.css' ?>" >
@@ -23,10 +24,10 @@
 					</div>
 					<div class="collapse navbar-collapse navHeaderCollapse">
 						<ul class ="nav navbar-nav navbar-right">
-							<li><a href="<?php echo base_url()?>" class ="active">BERANDA</a></li>
+							<li><a href="<?php echo base_url()?>" class ="beranda active">BERANDA</a></li>
 							<li><a href="<?php echo base_url().'Home/Galeri'?>">GALERI</a></li>
 							<li><a href="<?php echo base_url().'Home/Artikel'?>">ARTIKEL</a></li>
-							<li><a class="link-kontak" href="#kontak-neo">KONTAK</a></li>
+							<li><a class="one-page" href="#kontak-neo">KONTAK</a></li>
 						</ul>
 					</div>
 			</nav>
@@ -46,7 +47,7 @@
 									<div class="col-md-8 col-md-offset-2">
 											<h1 class="brand-heading animated fadeInDown">NEO WEDDING ORGANIZER</h1>
 											<p class="intro-text animated fadeInUp">We have ideas to be combinated with our client's idea to make a beyond imagination wedding</p>
-											<a href="#about" class="btn btn-circle page-scroll animated fadeInDown">
+											<a href="#about" class="btn btn-circle animated fadeInDown">
 													<i class="fa fa-angle-double-down animated"></i>
 											</a>
 									</div>
@@ -73,7 +74,7 @@
 		<div class="container">
 			<div id="about" class="container-fluid">
 				<div class="row row1">
-				  <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 animated" src="<?php echo base_url("img/trusted.png"); ?>"></div>
+				  <div class="col-sm-6"><img class="img-responsive center-block animated" src="<?php echo base_url("img/trusted.png"); ?>"></div>
 				  <div class="col-sm-6 col" >
 						<p class="text-center"><span class="text-center garis">Trusted & Reliable<br></span>Percayakanlah pesta pernikahan anda kepada kami, karena kami terpercaya dan dapat diandalkan</p>
 					</div>
@@ -143,17 +144,8 @@
 			</div>
 		</div>
 
-		<div class="row lihat-galeri">
+		<div class="lihat-galeri">
 			<div class="col-sm-6 col-foto-galeri ">
-				<section class="grid-1">
-					<div class="grid-inner">1
-						<p>px</p>
-					</div>
-					<div class="grid-inner">2</div>
-					<div class="grid-inner">3</div>
-					<div class="grid-inner">4</div>
-					<div class="grid-inner">5</div>
-				</section>
 			</div>
 			<div class="col-sm-6 col-kunjungi-galeri">
 				<p class="text-center">Kunjungi Galeri Kami<br><br><br><br><br><br></p>
@@ -161,47 +153,49 @@
 			</div>
 		</div>
 
-		<section class="testimonial text-center">
+		<section class="row testimonial text-center">
 			<div class="container">
-				<h1>Apa Kata Client Kami?</h1>
-				<div id="carousel-testimonial" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner testi" >
-						<div class="item active">
-							<p class="lead"><i>"Dengan adanya wedding planner ini, jadi gak perlu mikir-mikir lagi buat pesta pernikahanku"</i></p>
-							<span>Nama Testi 1</span>
+
+					<h1>Apa Kata Client Kami?</h1>
+					<div id="carousel-testimonial" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner testi" >
+							<div class="item active">
+								<p class="lead"><i>"Dengan adanya wedding planner ini, jadi gak perlu mikir-mikir lagi buat pesta pernikahanku"</i></p>
+								<span>Nama Testi 1</span>
+							</div>
+							<div class="item">
+								<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
+								<span>Nama Testi 2</span>
+							</div>
+							<div class="item">
+								<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
+								<span>Nama Testi 3</span>
+							</div>
+							<div class="item">
+								<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
+								<span>Nama Testi 4</span>
+							</div>
 						</div>
-						<div class="item">
-							<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
-							<span>Nama Testi 2</span>
-						</div>
-						<div class="item">
-							<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
-							<span>Nama Testi 3</span>
-						</div>
-						<div class="item">
-							<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
-							<span>Nama Testi 4</span>
-						</div>
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-testimonial" data-slide-to ="0" class="active">
+								<img src="<?php echo base_url("img/testimoni/avatar_01.jpg")?>"/>
+							</li>
+							<li data-target="#carousel-testimonial" data-slide-to ="1" >
+								<img src="<?php echo base_url("img/testimoni/avatar_02.jpg")?>"/>
+							</li>
+							<li data-target="#carousel-testimonial" data-slide-to ="2" >
+								<img src="<?php echo base_url("img/testimoni/avatar_03.jpg")?>"/>
+							</li>
+							<li data-target="#carousel-testimonial" data-slide-to ="3" >
+								<img src="<?php echo base_url("img/testimoni/avatar_04.jpg")?>"/>
+							</li>
+						</ol>
 					</div>
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-testimonial" data-slide-to ="0" class="active">
-							<img src="<?php echo base_url("img/testimoni/avatar_01.jpg")?>"/>
-						</li>
-						<li data-target="#carousel-testimonial" data-slide-to ="1" >
-							<img src="<?php echo base_url("img/testimoni/avatar_02.jpg")?>"/>
-						</li>
-						<li data-target="#carousel-testimonial" data-slide-to ="2" >
-							<img src="<?php echo base_url("img/testimoni/avatar_03.jpg")?>"/>
-						</li>
-						<li data-target="#carousel-testimonial" data-slide-to ="3" >
-							<img src="<?php echo base_url("img/testimoni/avatar_04.jpg")?>"/>
-						</li>
-					</ol>
-				</div>
+
 			</div>
 		</section>
 	<section id="kontak-neo" class="kontak">
-      <div class="container text-center garis">
+      <div class="text-center">
         <h2 class="title-center"><strong>Hubungi Kami</strong></h2>
       </div>
 			<div class="row container-fluid">
@@ -241,7 +235,7 @@
 	  </section>
 
 		<section class="container pesan">
-      <div class="text-center garis">
+      <div class="text-center">
         <h2 class="title-center"><strong>Kirim Pesan</strong></h2>
       </div>
 			<?php if($this->session->flashdata('error')) { ?>
@@ -249,7 +243,7 @@
             <?php } else if($this->session->flashdata('success')) { ?>
                 <div class='alert alert-success text-center'><?php echo $this->session->flashdata('success'); ?></div>
             <?php } ?>
-        
+
 			<form role="form" method="post" action="<?php echo base_url().'Home/Kontak/sendMessage'?>">
 				<div class="row">
 				  	<div class="form-group col-md-6 col-sm-12">
@@ -270,12 +264,24 @@
 				</div>
 			</form>
     </section>
+		<section class="lokasi">
+			<div class="container text-center">
+        <h2 class="title-center"><strong>Lokasi Kantor</strong></h2>
+      </div>
+
+			<h3 class="text-center">Jalan Kapasan Kidul 1 no 7 Simokerto, Surabaya</h3>
+			<div class="container" id="map">
+			</div>
+		</section>
     <?php require 'footer.php'; ?>
 		<a id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.2.1.min.js'); ?>"></script>
 	<script src="<?php echo base_url().'assets/admin_bootstrap/vendor/bootstrap/js/bootstrap.min.js' ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/beranda-js.js'); ?>"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPJiSH4BYDIXjSAIYj5kX5bO88hbg6RV4&callback=initMap"
+  type="text/javascript"></script>
+
 
 	</body>
 
