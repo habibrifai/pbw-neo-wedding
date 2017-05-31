@@ -15,7 +15,7 @@
 		<section>
 			<nav class = "navbar navbar-transparent navbar-inverse navbar-fixed-top animated fadeIn fadeInDown">
 					<div class="navbar-header">
-						<img class="navbar-brand" src="<?php echo base_url("img/NSM-Square.png"); ?>">
+						<a href="<?php echo base_url()?>"><img class="navbar-brand" src="<?php echo base_url("img/NSM-Square.png"); ?>"></a>
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 							<span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
@@ -161,33 +161,33 @@
 						<div class="carousel-inner testi" >
 							<div class="item active">
 								<p class="lead"><i>"Dengan adanya wedding planner ini, jadi gak perlu mikir-mikir lagi buat pesta pernikahanku"</i></p>
-								<span>Nama Testi 1</span>
+								<span>- Hesti Ayu -</span>
 							</div>
 							<div class="item">
-								<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
-								<span>Nama Testi 2</span>
+								<p class="lead"><i>"Terimakasih NEO, aku jadi sangat terbantu dengan layananmu, recommended deh.."</i></p>
+								<span>- Akila Shinta -</span>
 							</div>
 							<div class="item">
-								<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
-								<span>Nama Testi 3</span>
+								<p class="lead"><i>"Pekerjanya cepet tanggap, gara-gara itu weddingku lancar jaya, terimakasih NEO"</i></p>
+								<span>- Agung Baskoro Putra -</span>
 							</div>
 							<div class="item">
-								<p class="lead"><i>"Viral wayfarers offal vegan, gentrify kinfolk bespoke. Cronut tattooed typewriter, locavore PBR&B man braid authentic drinking vinega"</i></p>
-								<span>Nama Testi 4</span>
+								<p class="lead"><i>"Gak perlu ragu lagi sama wedding planner satu ini, TOP MARKOTOP"</i></p>
+								<span>- Sandi Amanah -</span>
 							</div>
 						</div>
 						<ol class="carousel-indicators">
 							<li data-target="#carousel-testimonial" data-slide-to ="0" class="active">
-								<img src="<?php echo base_url("img/testimoni/avatar_01.jpg")?>"/>
+								<img src="<?php echo base_url("img/testimoni/testi_01.jpg")?>"/>
 							</li>
 							<li data-target="#carousel-testimonial" data-slide-to ="1" >
-								<img src="<?php echo base_url("img/testimoni/avatar_02.jpg")?>"/>
+								<img src="<?php echo base_url("img/testimoni/testi_02.jpg")?>"/>
 							</li>
 							<li data-target="#carousel-testimonial" data-slide-to ="2" >
-								<img src="<?php echo base_url("img/testimoni/avatar_03.jpg")?>"/>
+								<img src="<?php echo base_url("img/testimoni/testi_03.jpg")?>"/>
 							</li>
 							<li data-target="#carousel-testimonial" data-slide-to ="3" >
-								<img src="<?php echo base_url("img/testimoni/avatar_04.jpg")?>"/>
+								<img src="<?php echo base_url("img/testimoni/testi_04.jpg")?>"/>
 							</li>
 						</ol>
 					</div>
@@ -247,19 +247,19 @@
 			<form role="form" method="post" action="<?php echo base_url().'Home/Kontak/sendMessage'?>">
 				<div class="row">
 				  	<div class="form-group col-md-6 col-sm-12">
-						<label>Name</label>
+						<label>Nama:</label>
 						<input type="text" name="nama" class="form-control">
 					</div>
 					<div class="form-group col-md-6 col-sm-12">
-						<label>Email</label>
+						<label>Email:</label>
 						<input type="text" name="email" class="form-control">
 					</div>
 					<div class="form-group col-md-12">
-						<label>Pesan</label>
+						<label>Pesan:</label>
 						<textarea type="text" name="pesan" class="form-control" rows="7"></textarea>
 					</div>
-					<div class="form-group col-md-12">
-						<input type="submit" class="btn btn-default" value="Kirim">
+					<div class="form-group col-md-12 text-center">
+						<input type="submit" class="btn btn-primary" value="Kirim">
 					</div>
 				</div>
 			</form>
@@ -269,7 +269,7 @@
         <h2 class="title-center"><strong>Lokasi Kantor</strong></h2>
       </div>
 
-			<h3 class="text-center">Jalan Kapasan Kidul 1 no 7 Simokerto, Surabaya</h3>
+			<h3 class="text-center">Jalan Kapasan Kidul 1 No. 7 Simokerto, Surabaya</h3>
 			<div class="container" id="map">
 			</div>
 		</section>

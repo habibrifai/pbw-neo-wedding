@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 	<section class="text-center">
 		<footer id="footer" class="dark">
 			<div id="quote">
@@ -13,7 +13,7 @@
 
 						<div class="widget clearfix">
 							<p >All you need is love and a Wedding Planner</p>
-							<div class="line" style="margin: 30px 0;"></div>
+
 						</div>
 					</div>
 				</div>

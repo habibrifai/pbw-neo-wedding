@@ -1,25 +1,4 @@
-/*var $document =$(document),
-    $element =$('.navbar'),
-    navbarDefault ='navbar-default';
-    navbarTransparent ='navbar-transparent';
-    fadeInDown = 'fadeInDown';
-
-$document.scroll(function() {
-     if($document.scrollTop() >= 100) {
-       $element.addClass(navbarDefault);
-       $element.removeClass(navbarTransparent);
-       $element.addClass(fadeInDown);
-       //if($(window).scrollTop() >= 120){
-        //  $('navbar').addClass('scrolled');
-       //}
-     }
-    else {
-      //$('navbar').removeClass('scrolled');
-      $element.removeClass(navbarDefault);
-      $element.addClass(navbarTransparent);
-      $element.removeClass(fadeInDown);
-    }
-});*/
+$('#return-to-top').fadeOut(200);
 function initMap(){
   var location ={ lat:-7.239557, lng:112.752729};
 	var map = new google.maps.Map(document.getElementById("map"), {
@@ -32,7 +11,6 @@ function initMap(){
 	});
 }
 function scrollKontak(){
-  event.preventDefault();
   var target =$('#kontak-neo');
   $('html, body').animate({
     scrollTop: target.offset().top -50
@@ -59,7 +37,7 @@ $(function(){
 
   $(".link-kontak").on('click', function(event) {
       windows.location.replace("url");
-      //scrollKontak();
+      scrollKontak();
 
 
 
@@ -86,14 +64,14 @@ $(function(){
       $('.navbar').removeClass('fadeInDown');
 
    }
-   if($(window).scrollTop() >= 500){
+   if($(window).scrollTop() >= 200){
      $('#return-to-top').fadeIn(200);
      $('.imgcol1row1').addClass('fadeInLeft');
    }
    else{
      $('#return-to-top').fadeOut(200);
    }
-   if($(window).scrollTop() >=$('#kontak-neo').position().top -50){
+   if($(window).scrollTop() >=$('#kontak-neo').position().top -60){
      $('.navbar a').removeClass('active');
      $('.one-page').addClass('active');
    }

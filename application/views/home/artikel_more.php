@@ -32,7 +32,7 @@
 			</nav>
 		</section>
 
-	 <div class="container text-center">
+	 <div class="container article-more text-center">
 		 <div class="row">
 			 <div class="col-sm-12 blog-main">
 			 	 <?php foreach ($artikel as $a) { ?>
@@ -42,9 +42,10 @@
 						 <p class="blog-post-meta"><?php echo $a->tgl_update;?></p>
 						 <p><?php echo $a->isi; ?></p>
 						 <!-- <a href="<?php echo $row['no']?>" class="btn btn-primary">Read More</a> -->
-					 </div><!-- /.blog-post -->
+					 </div>
 				 <?php } ?>
 			 </div>
+			 <a href="#" onClick="history.back()" class="btn btn-primary">Back</a><br>
 		 </div>
 		</div>
 		<?php require 'footer.php'; ?>

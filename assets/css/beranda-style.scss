@@ -102,7 +102,8 @@ h2:before, h2:after {
 // LIHAT-GALERI ----------------------------------------------------------------
 .col-kunjungi-galeri{
   //position: absolute;
-  box-shadow: -3px 0px 0px 0px rgba(0,0,0, 0.5);;
+  margin-top: 0px;
+  box-shadow: -3px 0px 6px rgba(0,0,0, 0.5);;
   p{
     font-size: 2.2em;
   }
@@ -114,7 +115,7 @@ h2:before, h2:after {
   background: url("../../img/gambar-collation.jpg") ;
   background-size: cover;
   margin-top: 0px;
-  z-index: 0;
+  z-index: -2;
   //position: absolute;
 }
 .lihat-galeri{
@@ -368,7 +369,6 @@ h2:before, h2:after {
   z-index: 3;
 }
 .intro .intro-body{
-  padding-top: 100px;
   display:table-cell;
   vertical-align:middle;
 }
@@ -378,17 +378,57 @@ h2:before, h2:after {
 .intro-body .intro-text{
   font-size:18px;
 }
-@media (min-width:768px){
+@media (min-width:426px) and (max-width:768px){
   .intro{
     margin-top: 10px;
     height:100%;
     padding:0;
   }
-  .intro .intro-body .brand-heading{
+  .intro .intro-body{
     font-size:100px;
+    padding-top: 100px;
+  }
+  .intro-body .brand-heading{
+    font-size:70px;
+  }
+  .intro-body .intro-text{
+    font-size:28px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width:769px) and (max-width:1024px){
+  .intro{
+    margin-top: 10px;
+    height:100%;
+    padding:0;
+  }
+  .intro .intro-body {
+    font-size:100px;
+    padding-top: 60px;
+  }
+  .intro-body .brand-heading{
+    font-size:80px;
   }
   .intro .intro-body .intro-text{
-    font-size:26px;
+    font-size:30px;
+  }
+}
+@media (min-width:1025px) and (max-width:1440px){
+  .intro{
+    margin-top: 10px;
+    height:100%;
+    padding:0;
+  }
+  .intro .intro-body {
+    font-size:100px;
+    padding-top: 80px;
+  }
+  .intro-body .brand-heading{
+    font-size:90px;
+  }
+  .intro .intro-body .intro-text{
+    font-size:35px;
   }
 }
 
@@ -691,9 +731,12 @@ height: 500px;
       font-family: 'Great Vibes', cursive;
       font-size: 3.2em;
       color: #fff;
+      margin-bottom: 0px;
     }
 }
-
+.widget{
+    align-items: center;
+}
 
 #footer .footer-widgets-wrap {
 	position: relative;
@@ -703,12 +746,13 @@ height: 500px;
 #copyrights {
 	padding: 40px 0;
 	background-color: #DDD;
-	font-size: 14px;
+	font-size: 17px;
 	line-height: 1.8;
 }
 
 .copyright-links {
   a {
+    font-size: 20px;
     display: inline-block;
     margin: 0 3px;
     color: #555;
@@ -822,15 +866,26 @@ height: 500px;
 }
 //------------------------------------------------------------------------------
 
-//MEDIA QUERIES-----------------------------------------------------------------
-@media only screen and (max-width : 767px) {
+// ARTICLE MORE-----------------------------------------------------------------
+.article-more{
+  .row{
+    margin-bottom: 10px;
+  }
+}
+//------------------------------------------------------------------------------
 
+//MEDIA QUERIES-----------------------------------------------------------------
+@media (max-width:767px){
   .navbar-brand {
     transform: translateX(-50%);
     left: 50%;
     position: absolute;
     margin-left: 0;
   }
+}
+@media only screen and (max-width:1024px) {
+
+
 
   .no-hp,.no-wa{
     transform: rotateY(180deg);
@@ -870,7 +925,7 @@ height: 500px;
       width: 970px;
   }
 }
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     .carousel-inner {
       .item{
         background-attachment: scroll;
